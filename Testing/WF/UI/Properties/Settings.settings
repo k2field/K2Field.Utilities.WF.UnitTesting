@@ -6,10 +6,10 @@
       <Value Profile="(Default)">localhost</Value>
     </Setting>
     <Setting Name="ViewFlowURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://localhost/viewflow</Value>
+      <Value Profile="(Default)">http://workspace.denallix.com/ViewFlow/ViewFlow.aspx?ViewTypeName=ProcessView&amp;K2Server=k2server.denallix.com:5252&amp;HostServerName=k2server.denallix.com&amp;HostServerPort=5555&amp;ProcessID=</Value>
     </Setting>
     <Setting Name="TestFile" Type="System.String" Scope="User">
-      <Value Profile="(Default)">.\test.xml</Value>
+      <Value Profile="(Default)">..\..\..\..\SampleWorkflow\NewStyleTestFiles\All.xml</Value>
     </Setting>
   </Settings>
 </SettingsFile>

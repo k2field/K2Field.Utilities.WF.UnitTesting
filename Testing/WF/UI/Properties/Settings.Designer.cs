@@ -37,7 +37,9 @@ namespace K2Field.Utilities.Testing.WF.UI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost/viewflow")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://workspace.denallix.com/ViewFlow/ViewFlow.aspx?ViewTypeName=ProcessView&K2S" +
+            "erver=k2server.denallix.com:5252&HostServerName=k2server.denallix.com&HostServer" +
+            "Port=5555&ProcessID=")]
         public string ViewFlowURL {
             get {
                 return ((string)(this["ViewFlowURL"]));
@@ -49,7 +51,7 @@ namespace K2Field.Utilities.Testing.WF.UI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(".\\test.xml")]
+        [global::System.Configuration.DefaultSettingValueAttribute("..\\..\\..\\..\\SampleWorkflow\\NewStyleTestFiles\\All.xml")]
         public string TestFile {
             get {
                 return ((string)(this["TestFile"]));
