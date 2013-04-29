@@ -1,0 +1,56 @@
+<Processes rootDir="\..\..">
+  <Process Description="Travel - Simple rejected" processName="K2Field.Utilities.Testing.SampleWorkflow\Travel">
+      <DataFields>
+        <DataField Name="Data.Amount">50.01</DataField>
+        <DataField Name="Data.AdvApprovalRequired">False</DataField>
+        <DataField Name="Data.FlightsRequired">False</DataField>
+      </DataFields>
+      <PreMethodCall />
+      <PostMethodCall />
+    <Activity name="Needs Approval">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>Reject</Action>
+      <RetryInSeconds>5</RetryInSeconds>
+      <RetryCount>5</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Rejected">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[Completed]</Action>
+      <RetryInSeconds>2</RetryInSeconds>
+      <RetryCount>15</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Prepare Bookings">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[NotTaken]</Action>
+      <RetryInSeconds>2</RetryInSeconds>
+      <RetryCount>15</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Resubmit">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[NotTaken]</Action>
+      <RetryInSeconds>2</RetryInSeconds>
+      <RetryCount>15</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Advanced Approval">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[NotTaken]</Action>
+      <RetryInSeconds>2</RetryInSeconds>
+      <RetryCount>15</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+  </Process>
+</Processes>

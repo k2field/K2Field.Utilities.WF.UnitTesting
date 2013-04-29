@@ -1,0 +1,85 @@
+<Processes rootDir="\..\..">
+  <Process Description="Travel - resubmited and Adv Approval Required" processName="K2Field.Utilities.Testing.SampleWorkflow\Travel">
+      <DataFields>
+        <DataField Name="Data.Amount">117</DataField>
+        <DataField Name="Data.AdvApprovalRequired">True</DataField>
+        <DataField Name="Data.FlightsRequired">False</DataField>
+      </DataFields>
+      <PreMethodCall />
+      <PostMethodCall />
+    <Activity name="Needs Approval">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>Information Required</Action>
+      <RetryInSeconds>5</RetryInSeconds>
+      <RetryCount>5</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Resubmit">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[Active]</Action>
+      <RetryInSeconds>5</RetryInSeconds>
+      <RetryCount>5</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Advanced Approval">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[NotTaken]</Action>
+      <RetryInSeconds>2</RetryInSeconds>
+      <RetryCount>15</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Prepare Bookings">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[NotTaken]</Action>
+      <RetryInSeconds>2</RetryInSeconds>
+      <RetryCount>15</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Rejected">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[NotTaken]</Action>
+      <RetryInSeconds>2</RetryInSeconds>
+      <RetryCount>15</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Resubmit">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>Submit</Action>
+      <RetryInSeconds>5</RetryInSeconds>
+      <RetryCount>5</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activity name="Needs Approval">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>Accept</Action>
+      <RetryInSeconds>5</RetryInSeconds>
+      <RetryCount>5</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activities fileName="Activities\AA\NoDirector-Approved.xml" />
+    <Activity name="Rejected">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[NotTaken]</Action>
+      <RetryInSeconds>2</RetryInSeconds>
+      <RetryCount>15</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+    <Activities fileName="Activities\Travel\BookHotelOnly.xml" />
+  </Process>
+</Processes>

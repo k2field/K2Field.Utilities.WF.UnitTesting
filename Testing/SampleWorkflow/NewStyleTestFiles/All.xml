@@ -1,0 +1,4 @@
+<Processes>
+  <Processes fileName="AllTravel.xml" description="run test"  TestEnabled="True" />
+  <Processes fileName="AllAA.xml" description="run test"  TestEnabled="True" />
+</Processes>

@@ -1,0 +1,21 @@
+<Processes rootDir="\..\..">
+  <Process Description="Travel - No Approval" processName="K2Field.Utilities.Testing.SampleWorkflow\Travel">
+      <DataFields>
+        <DataField Name="Data.Amount">50</DataField>
+        <DataField Name="Data.AdvApprovalRequired">False</DataField>
+        <DataField Name="Data.FlightsRequired">False</DataField>
+      </DataFields>
+      <PreMethodCall />
+      <PostMethodCall />
+    <Activities fileName="~\Activities\Travel\BookHotelOnly.xml" />
+    <Activity name="Needs Approval">
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <DataFields />
+      <Action>[NotTaken]</Action>
+      <RetryInSeconds>5</RetryInSeconds>
+      <RetryCount>5</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activity>
+  </Process>
+</Processes>

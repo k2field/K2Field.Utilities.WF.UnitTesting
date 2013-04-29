@@ -1,0 +1,7 @@
+<Processes>
+  <Processes fileName="Tests\Travel\1.Simple.xml" description="run test"  TestEnabled="True" />
+  <Processes fileName="Tests\Travel\2.SimpleWithFlight.xml" description="run test"  TestEnabled="True" />
+  <Processes fileName="Tests\Travel\3.Complex.xml" description="run test"  TestEnabled="True" />
+  <Processes fileName="Tests\Travel\4.SimpleReject.xml" description="run test"  TestEnabled="True" />
+  <Processes fileName="Tests\Travel\5.AdvancedReject.xml" description="run test"  TestEnabled="True" />
+</Processes>

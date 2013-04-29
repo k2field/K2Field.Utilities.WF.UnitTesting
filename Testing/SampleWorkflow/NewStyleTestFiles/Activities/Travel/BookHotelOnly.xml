@@ -1,0 +1,30 @@
+<Activities>
+  <Activity name="Book Hotel">
+    <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+    <DataFields />
+    <Action>Task Completed</Action>
+    <RetryInSeconds>2</RetryInSeconds>
+    <RetryCount>15</RetryCount>
+    <PreMethodCall />
+    <PostMethodCall />
+  </Activity>
+  <Activity name="Booking Complete">
+    <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+    <DataFields/>
+    <Action>[Completed]</Action>
+    <RetryInSeconds>2</RetryInSeconds>
+    <RetryCount>15</RetryCount>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+  </Activity>
+  <Activity name="Book Flight">
+    <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+    <DataFields />
+    <Action>[NotTaken]</Action>
+    <RetryInSeconds>2</RetryInSeconds>
+    <RetryCount>15</RetryCount>
+    <PreMethodCall />
+    <PostMethodCall />
+  </Activity>
+</Activities>

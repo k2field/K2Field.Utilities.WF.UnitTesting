@@ -1,0 +1,823 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Process Type="SourceCode.Workflow.Design.DefaultProcess" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" Version="4"><References><AssemblyReference><Guid>a26dfa8504c643ccbece3f026bc8a15a</Guid><ItemName>Reference</ItemName><ItemInclude>System</ItemInclude><AssemblyName>System</AssemblyName></AssemblyReference><AssemblyReference><Guid>fe69d8e442ac479f8f76e3ebdd3d8b6c</Guid><ItemName>Reference</ItemName><ItemInclude>System.Drawing</ItemInclude><AssemblyName>System.Drawing</AssemblyName></AssemblyReference><AssemblyReference><Guid>5a9412d1edb1484183f23c562d01ebd8</Guid><ItemName>Reference</ItemName><ItemInclude>System.Windows.Forms</ItemInclude><AssemblyName>System.Windows.Forms</AssemblyName></AssemblyReference><AssemblyReference><Guid>df79e3c33f4b442e85aa2087e7bc8c7b</Guid><ItemName>Reference</ItemName><ItemInclude>System.Data</ItemInclude><AssemblyName>System.Data</AssemblyName></AssemblyReference><AssemblyReference><Guid>c4d1445952e84952b223baaceece1b4c</Guid><ItemName>Reference</ItemName><ItemInclude>System.Xml</ItemInclude><AssemblyName>System.Xml</AssemblyName></AssemblyReference><AssemblyReference><Guid>d4c71c46f60344e09ba7c70386fd1613</Guid><ItemName>Reference</ItemName><ItemInclude>System.Design</ItemInclude><AssemblyName>System.Design</AssemblyName></AssemblyReference><AssemblyReference><Guid>7d68081f3f8e43c7bd5e32c755abbb00</Guid><ItemName>Reference</ItemName><ItemInclude>System.Web</ItemInclude><AssemblyName>System.Web</AssemblyName></AssemblyReference><AssemblyReference><Guid>d2e85d6f223747e0a8a9d551046f0cff</Guid><ItemName>Reference</ItemName><ItemInclude>System.Web.Services</ItemInclude><AssemblyName>System.Web.Services</AssemblyName></AssemblyReference><AssemblyReference><Guid>69cecd72447c42c9a9dbe4ca2055f1d5</Guid><ItemName>Reference</ItemName><ItemInclude>System.Transactions</ItemInclude><AssemblyName>System.Transactions</AssemblyName></AssemblyReference><AssemblyReference><Guid>632d875739fa436c9d14ed333c174ca6</Guid><ItemName>Reference</ItemName><ItemInclude>System.Drawing.Design</ItemInclude><AssemblyName>System.Drawing.Design</AssemblyName></AssemblyReference><AssemblyReference><Guid>e6f14fe1b22847c989a1d9fd8d406636</Guid><ItemName>Reference</ItemName><ItemInclude>System.Workflow.ComponentModel</ItemInclude><AssemblyName>System.Workflow.ComponentModel</AssemblyName></AssemblyReference><AssemblyReference><Guid>839ba04c7d6d49349ecf038990dacdf5</Guid><ItemName>Reference</ItemName><ItemInclude>System.Workflow.Runtime</ItemInclude><AssemblyName>System.Workflow.Runtime</AssemblyName></AssemblyReference><AssemblyReference><Guid>2eb63e9877ab43b7ac1deb737eebada5</Guid><ItemName>Reference</ItemName><ItemInclude>System.Workflow.Activities</ItemInclude><AssemblyName>System.Workflow.Activities</AssemblyName></AssemblyReference><AssemblyReference><Guid>b6c71439c2bb4d8789fc66160ed55d2c</Guid><ItemName>Reference</ItemName><ItemInclude>SourceCode.SmartObjects.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</ItemInclude><AssemblyName>SourceCode.SmartObjects.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</AssemblyName></AssemblyReference><AssemblyReference><Guid>44121cb3d1a848f9a3ff33fa57a5f81d</Guid><ItemName>Reference</ItemName><ItemInclude>SourceCode.HostClientAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</ItemInclude><AssemblyName>SourceCode.HostClientAPI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</AssemblyName></AssemblyReference><AssemblyReference><Guid>6fee5b89a92f42858c04762861a98889</Guid><ItemName>Reference</ItemName><ItemInclude>KO, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</ItemInclude><CopyLocal>0</CopyLocal><AssemblyName>KO, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</AssemblyName><Path>..\..\..\..\Program Files (x86)\K2 blackpearl\bin\KO.dll</Path></AssemblyReference><AssemblyReference><Guid>46005bad844d4a15b39e88ac7d14ccfa</Guid><ItemName>Reference</ItemName><ItemInclude>SourceCode.Workflow.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</ItemInclude><CopyLocal>0</CopyLocal><AssemblyName>SourceCode.Workflow.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</AssemblyName></AssemblyReference><AssemblyReference><Guid>a93d1201f6bc4477ac8f0d0a46709323</Guid><ItemName>Reference</ItemName><ItemInclude>SourceCode.ResolverFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</ItemInclude><CopyLocal>0</CopyLocal><AssemblyName>SourceCode.ResolverFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d</AssemblyName></AssemblyReference><AssemblyReference><Guid>29b39586cb374e76badd6b30387bd122</Guid><ItemName>Reference</ItemName><ItemInclude>System.Core</ItemInclude><AssemblyName>System.Core</AssemblyName><RequiredFramework>3.5</RequiredFramework></AssemblyReference><AssemblyReference><Guid>7f5b0733734147b58798df5b14971b7b</Guid><ItemName>Reference</ItemName><ItemInclude>System.Xml.Linq</ItemInclude><AssemblyName>System.Xml.Linq</AssemblyName><RequiredFramework>3.5</RequiredFramework></AssemblyReference><AssemblyReference><Guid>074303e2281b42d1bfb5a9c328a940b7</Guid><ItemName>Reference</ItemName><ItemInclude>System.ServiceModel</ItemInclude><AssemblyName>System.ServiceModel</AssemblyName></AssemblyReference></References><ExecutionLayers><ExecutionLayer><ExecutableItems><ClientEventItem Type="SourceCode.Workflow.Design.ClientEventItem" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Extender Type="SourceCode.Workflow.Design.WindowsWorkflowExtender" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><CodeFiles><CodeFile><Guid>aea9d02240a248a1af2d9bbc8e3e69e3</Guid><OriginalFileName>@safeitemname@.xoml</OriginalFileName><Primary>1</Primary><Content><![CDATA[<ns0:WorkflowContext xmlns:ns0="clr-namespace:SourceCode.Workflow.Common.Extenders;Assembly=SourceCode.Workflow.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" x:Class="ExtenderProject_32ad791b87334c49ae5dc1653533bbad.EventItem_7d52c24b1c2043598bd07d8ee8322ddf" x:Name="EventItem_7d52c24b1c2043598bd07d8ee8322ddf" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<ns0:WorkflowContext.LockedActivities>
+		<x:Array Type="{x:Type System.String}">
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">SendToInternet</ns1:String>
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">SendToMobile</ns1:String>
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">SendToExchange</ns1:String>
+		</x:Array>
+	</ns0:WorkflowContext.LockedActivities>
+	<ConditionedActivityGroup x:Name="ClientEventActivity">
+		<ConditionedActivityGroup.UntilCondition>
+			<CodeCondition Condition="UntilCondition" />
+		</ConditionedActivityGroup.UntilCondition>
+		<CodeActivity x:Name="SendToInternet" ExecuteCode="SendWorkToInternet">
+			<ConditionedActivityGroup.WhenCondition>
+				<CodeCondition Condition="ShouldSendToInternet" />
+			</ConditionedActivityGroup.WhenCondition>
+		</CodeActivity>
+		<CodeActivity x:Name="SendToMobile" ExecuteCode="SendWorkToMobile">
+			<ConditionedActivityGroup.WhenCondition>
+				<CodeCondition Condition="ShouldSendToMobile" />
+			</ConditionedActivityGroup.WhenCondition>
+		</CodeActivity>
+		<CodeActivity x:Name="SendToExchange" ExecuteCode="SendWorkToExchange">
+			<ConditionedActivityGroup.WhenCondition>
+				<CodeCondition Condition="ShouldSendToExchange" />
+			</ConditionedActivityGroup.WhenCondition>
+		</CodeActivity>
+	</ConditionedActivityGroup>
+
+</ns0:WorkflowContext>]]></Content></CodeFile><CodeFile><Guid>090a65ab2c8b487184b4754010a78221</Guid><OriginalFileName>@safeitemname@.xoml.cs</OriginalFileName><Content><![CDATA[using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Drawing;
+using System.Workflow.ComponentModel.Compiler;
+using System.Workflow.ComponentModel.Serialization;
+using System.Workflow.ComponentModel;
+using System.Workflow.ComponentModel.Design;
+using System.Workflow.Runtime;
+using System.Workflow.Activities;
+using System.Workflow.Activities.Rules;
+using SourceCode.KO;
+using SourceCode.Workflow.Common.Extenders;
+using hostContext = Project_32ad791b87334c49ae5dc1653533bbad.EventItemContext_7d52c24b1c2043598bd07d8ee8322ddf;
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+	public partial class EventItem_7d52c24b1c2043598bd07d8ee8322ddf : IWorkflowContext<hostContext>
+    {
+
+		private bool internetExecuted = false;
+        private bool mobileExecuted = false;
+        private bool exchangeExecuted = false;
+		private bool AllowAnyUserToFinishEventDone = false;
+
+        #region K2 Context
+
+        private hostContext _k2;
+
+        #endregion
+
+		#region Client Event Activity
+
+		 private void UntilCondition(object sender, ConditionalEventArgs e)
+        {
+			if (!AllowAnyUserToFinishEventDone)
+            {
+                if (Convert.ToBoolean(K2.Configuration.AllowAnyUserToFinishEvent))
+                {
+                    K2.VerifyCredentials = false;
+                }
+                else
+                {
+                    K2.VerifyCredentials = true;
+                }
+                AllowAnyUserToFinishEventDone = true;
+            }
+            if (internetExecuted && mobileExecuted && exchangeExecuted)
+            {
+                e.Result = true;
+            }
+            else
+            {
+                e.Result = false;
+            }
+        }
+		#endregion
+
+        #region Internet
+
+		private void ShouldSendToInternet(object sender, ConditionalEventArgs e)
+        {
+            internetExecuted = true;
+            e.Result = bool.Parse(K2.Configuration.SendToInternet);
+        }
+
+        private void SendWorkToInternet(object sender, EventArgs e)
+        {
+            string strURL = K2.Configuration.InternetUrl;
+            strURL = strURL.Replace("{SERIALNO}", K2.SerialNumber);
+            K2.AddWorklist(K2.Configuration.InternetPlatform, System.Web.HttpUtility.UrlPathEncode(strURL));
+            
+            
+        }
+        #endregion
+
+        #region Mobile
+        private void SendWorkToMobile(object sender, EventArgs e)
+        {
+            string strURL = K2.Configuration.MobileUrl;
+            strURL = strURL.Replace("{SERIALNO}", K2.SerialNumber);
+            K2.AddWorklist(K2.Configuration.MobilePlatform, System.Web.HttpUtility.UrlPathEncode(strURL));
+            
+        }
+
+        private void ShouldSendToMobile(object sender, ConditionalEventArgs e)
+        {
+            mobileExecuted = true;
+            e.Result = bool.Parse(K2.Configuration.SendToMobile);
+        }
+        #endregion
+
+        #region Exchange
+
+        private void ShouldSendToExchange(object sender, ConditionalEventArgs e)
+        {
+            exchangeExecuted = true;
+            e.Result = bool.Parse(K2.Configuration.SendToExchange);
+        }
+
+        private void SendWorkToExchange(object sender, EventArgs e)
+        {
+            K2.AddWorklist("EXCHANGEPROFILENAME", K2.Configuration.ExchangeProfileName);
+            K2.AddWorklist("EXCHANGEFORMTYPE", K2.Configuration.ExchangeFormType);
+            
+        }
+
+        #endregion
+
+
+        #region Other Methods
+
+        #endregion
+
+
+        #region IWorkflowContext<hostContext> Members
+
+        public Project_32ad791b87334c49ae5dc1653533bbad.EventItemContext_7d52c24b1c2043598bd07d8ee8322ddf K2
+        {
+            get
+            {
+                return _k2;
+            }
+            set
+            {
+                _k2 = value;
+            }
+        }
+
+        #endregion
+    }
+}
+]]></Content></CodeFile></CodeFiles><Guid>7d52c24b1c2043598bd07d8ee8322ddf</Guid><MetaData /><Username /><CredentialGuid>00000000-0000-0000-0000-000000000000</CredentialGuid><Language>CSharp</Language></Extender><NotificationMessage Type="SourceCode.Workflow.Authoring.NotificationMessage" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>a60c397d756049a48f54b77d5db9529d</Guid></NotificationMessage><InternetUrl Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Parts><ValueTypePart Type="SourceCode.Workflow.Design.ValueTypePart" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>862da01b62f24911ac4de9e1de974cf3</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType><Value><![CDATA[http://localhost:81/Travel/?]]></Value></ValueTypePart><SerialNoFieldPart Type="SourceCode.Workflow.Design.SerialNoFieldPart" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>8e3b98f884804dd3928202a1bcfaa980</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType><Value>SN={SERIALNO}</Value></SerialNoFieldPart></Parts><Guid>5dfd74f48db74e73a4316a5d1768015b</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></InternetUrl><Guid>d3bb77af99d3412bae06a9cead82b25c</Guid><MetaData /><Parent ref="543a1d58-b8b7-4635-a498-7f5e91355e1c&#xD;" /><SendToInternet>1</SendToInternet><InternetPlatform>ASP</InternetPlatform><MobilePlatform>ASP</MobilePlatform></ClientEventItem><SimpleDestinationRule Type="SourceCode.Workflow.Design.SimpleRules.SimpleDestinationRule" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Extender Type="SourceCode.Workflow.Design.WindowsWorkflowExtender" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><CodeFiles><CodeFile><Guid>4a2e93b887b94d0997fc3bc1de621f2c</Guid><OriginalFileName>@safeitemname@.xoml</OriginalFileName><Primary>1</Primary><Content><![CDATA[<ns0:WorkflowContext xmlns:ns0="clr-namespace:SourceCode.Workflow.Common.Extenders;Assembly=SourceCode.Workflow.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" x:Class="ExtenderProject_32ad791b87334c49ae5dc1653533bbad.DestinationRule_78296c8115d743f593b3ef7c4e92a076" x:Name="DestinationRule_78296c8115d743f593b3ef7c4e92a076" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ns0:WorkflowContext.LockedActivities>
+    </ns0:WorkflowContext.LockedActivities>
+	<CodeActivity x:Name="DestinationRule" ExecuteCode="DestinationRule_ExecuteCode" />
+</ns0:WorkflowContext>
+]]></Content></CodeFile><CodeFile><Guid>eb2901a163c24536b5a51c3a69ab1df0</Guid><OriginalFileName>@safeitemname@.xoml.cs</OriginalFileName><Content><![CDATA[using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Drawing;
+using System.Workflow.ComponentModel.Compiler;
+using System.Workflow.ComponentModel.Serialization;
+using System.Workflow.ComponentModel;
+using System.Workflow.ComponentModel.Design;
+using System.Workflow.Runtime;
+using System.Workflow.Activities;
+using System.Workflow.Activities.Rules;
+using SourceCode.Workflow.Common.Extenders;
+using SourceCode.KO;
+using hostContext = Project_32ad791b87334c49ae5dc1653533bbad.DestinationRuleContext_78296c8115d743f593b3ef7c4e92a076;
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+	public partial class DestinationRule_78296c8115d743f593b3ef7c4e92a076 : IWorkflowContext<hostContext>
+	{
+		#region K2 Context
+
+        private hostContext _k2;
+
+        #endregion
+
+		#region IWorkflowContext<hostContext> Members
+
+        public Project_32ad791b87334c49ae5dc1653533bbad.DestinationRuleContext_78296c8115d743f593b3ef7c4e92a076 K2
+        {
+            get
+            {
+                return _k2;
+            }
+            set
+            {
+                _k2 = value;
+            }
+        }
+
+        #endregion
+        
+        private void DestinationRule_ExecuteCode(object sender, EventArgs e)
+        {
+            if (K2.ActivityInstance.SlotInstance)
+            {
+                //
+                // The activity is a slot instance activity
+                //
+
+                int slotCount = 0;
+                string[] slotInstanceData = null;
+
+                if (K2.Configuration.DynamicSlots)
+                {
+                    // If it is dynamic slot, get the slot count from
+                    // the initialization data
+                    slotCount = K2.Configuration.SlotInstanceData.Length;
+                    slotInstanceData = K2.Configuration.SlotInstanceData;
+                }
+                else
+                {
+                    // Get the slot count and prepare the initialization
+                    // data
+                    slotCount = K2.Configuration.Slots;
+                    slotInstanceData = new string[slotCount];
+                    string initData = string.Empty;
+                    if (K2.Configuration.SlotInstanceData.Length > 0)
+                    {
+                        initData = K2.Configuration.SlotInstanceData[0];
+                    }
+                    for (int i = 0; i < slotCount; i++)
+                    {
+                        slotInstanceData[i] = initData;
+                    }
+                }
+
+                // Set the slot count and initialization data
+                K2.Slots = slotCount;
+                K2.SlotInstanceData = K2.Configuration.SlotInstanceData;
+            }
+            else
+            {
+                K2.DynamicQueues = K2.Configuration.DynamicQueues;
+                K2.ResolveQueuesToUsers = K2.Configuration.ResolveQueuesToUsers;
+
+                int setCount = K2.Configuration.SetCount;
+
+                for (int i = 0; i < setCount; i++)
+                {
+                    if (GetRuleResult(i + 1))
+                    {
+                        AddDestinations(i + 1);
+                    }
+                }
+            }
+        }
+
+       #region - Helper Methods -
+
+        private bool GetRuleResult(int setIdx)
+        {
+            // Get the property that returns the result
+            string propName = string.Format("DestinationSetRuleResult{0}", setIdx);
+            System.Reflection.PropertyInfo pi =
+                K2.Configuration.GetType().GetProperty(propName);
+            if (pi == null)
+                return true;
+
+            // Invoke the get
+            System.Reflection.MethodInfo mi = pi.GetGetMethod();
+            if (mi == null)
+                return true;
+
+            object retval = mi.Invoke(K2.Configuration, null);
+
+            return Convert.ToBoolean(retval);
+        }
+
+        private void AddDestinations(int setIdx)
+        {
+            // Get the property that returns the result
+            string propName = string.Format("DestinationSetDestinationTable{0}", setIdx);
+            System.Reflection.PropertyInfo pi =
+                K2.Configuration.GetType().GetProperty(propName);
+            if (pi == null)
+                return;
+            System.Reflection.MethodInfo mi = pi.GetGetMethod();
+            if (mi == null)
+                return;
+
+            // Invoke the get
+            object retval = mi.Invoke(K2.Configuration, null);
+            if (retval == null)
+                return;
+
+            string[][] destinations = (string[][])retval;
+
+            // Results are returned in a jagged array. The first item contains the
+            // DestinationType and the rest will be the users, groups or queues.
+            for (int row = 0; row < destinations.Length; row++)
+            {
+                DestinationType destType = DestinationType.User;
+
+                // Get the DestinationType
+                switch (destinations[row][0])
+                {
+                    case "User":
+                        destType = DestinationType.User;
+                        break;
+                    case "Group":
+                        destType = DestinationType.Group;
+                        break;
+                    case "Queue":
+                        destType = DestinationType.Queue;
+                        break;
+                }
+
+                // Iterate through the rest of the list and add each
+                // destination with its corresponding type.
+                for (int i = 1; i < destinations[row].Length; i++)
+                {
+                    K2.Destinations.Add(destType, destinations[row][i]);
+                }
+            }
+        }
+
+        #endregion
+    }
+}
+]]></Content></CodeFile></CodeFiles><Guid>78296c8115d743f593b3ef7c4e92a076</Guid><MetaData /><Username /><CredentialGuid>00000000-0000-0000-0000-000000000000</CredentialGuid><Language>CSharp</Language></Extender><DestinationSets><DestinationSet Type="SourceCode.Workflow.Design.SimpleRules.DestinationSet" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Destinations><Destination Type="SourceCode.Workflow.Design.SimpleRules.Destination" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Value Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Parts><WorkflowContextFieldPart Type="SourceCode.Workflow.Design.WorkflowContextFieldPart" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>4fcdea5fd1264696b5a8e0927051e1c8</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType><WFPropertyEnum>ProcessOriginatorName</WFPropertyEnum><WorkflowContextProperty>ProcessOriginatorName</WorkflowContextProperty></WorkflowContextFieldPart></Parts><Guid>8589e614b8664f8eaea75166adf25621</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></Value><Guid>0e3c38ac486d4b0ebfbfb1859e79376c</Guid></Destination></Destinations><Guid>a5dd3f39e1804ebfa3efa7e661f4b10e</Guid><Name>Default</Name></DestinationSet></DestinationSets><Guid>6bccdb72080c492bb2600ccb53e0f438</Guid><MetaData /><Parent ref="19cebf5e-14da-4350-988f-83a85b3906c0&#xD;" /><ResolveQueuesToUsers>1</ResolveQueuesToUsers></SimpleDestinationRule><DefaultOutcomeAction Type="SourceCode.Workflow.Design.Outcome.DefaultOutcomeAction" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Extender Type="SourceCode.Workflow.Design.WindowsWorkflowExtender" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><CodeFiles><CodeFile><Guid>a956658208d4498b9f23e46c71c51cb9</Guid><OriginalFileName>@safeitemname@.xoml</OriginalFileName><Primary>1</Primary><Content><![CDATA[<ns0:WorkflowContext xmlns:ns0="clr-namespace:SourceCode.Workflow.Common.Extenders;Assembly=SourceCode.Workflow.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" x:Class="ExtenderProject_32ad791b87334c49ae5dc1653533bbad.ActionItem_a741d212eb4b4b4abb6e2c87b7cf061f" x:Name="ActionItem_a741d212eb4b4b4abb6e2c87b7cf061f" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	 <ns0:WorkflowContext.LockedActivities>
+		<x:Array Type="{x:Type System.String}">
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">SetActionResult</ns1:String>
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">FinishAction</ns1:String>
+		</x:Array>
+	</ns0:WorkflowContext.LockedActivities>
+	<CodeActivity x:Name="SetActionResult" ExecuteCode="SetActionResult_ExecuteCode" Description="Set Action Result" />
+	<CodeActivity x:Name="FinishAction" ExecuteCode="FinishAction_ExecuteCode" Description="Finish Action" />
+</ns0:WorkflowContext>
+]]></Content></CodeFile><CodeFile><Guid>4ed1863ee6c04d989cbf30c6daefea23</Guid><OriginalFileName>@safeitemname@.xoml.cs</OriginalFileName><Content><![CDATA[using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Drawing;
+using System.Workflow.ComponentModel.Compiler;
+using System.Workflow.ComponentModel.Serialization;
+using System.Workflow.ComponentModel;
+using System.Workflow.ComponentModel.Design;
+using System.Workflow.Runtime;
+using System.Workflow.Activities;
+using System.Workflow.Activities.Rules;
+using SourceCode.Workflow.Common.Extenders;
+using SourceCode.KO;
+using hostContext = Project_32ad791b87334c49ae5dc1653533bbad.ActionItemContext_a741d212eb4b4b4abb6e2c87b7cf061f;
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+	public partial class ActionItem_a741d212eb4b4b4abb6e2c87b7cf061f : IWorkflowContext<hostContext>
+	{
+		#region K2 Context
+
+        private hostContext _k2;
+
+        #endregion
+
+		#region IWorkflowContext<hostContext> Members
+
+        public Project_32ad791b87334c49ae5dc1653533bbad.ActionItemContext_a741d212eb4b4b4abb6e2c87b7cf061f K2
+        {
+            get
+            {
+                return _k2;
+            }
+            set
+            {
+                _k2 = value;
+            }
+        }
+
+        #endregion
+
+	private void SetActionResult_ExecuteCode(object sender, EventArgs e)
+        {
+            ActionHelper.SetActionResult(K2);
+        }
+
+        private void FinishAction_ExecuteCode(object sender, EventArgs e)
+        {
+            ActionHelper.FinishAction(K2);
+        }
+	}
+}
+]]></Content></CodeFile><CodeFile><Guid>1cf4ac95d4a44eb198841923f91845fc</Guid><OriginalFileName>@safeitemname@Helper.cs</OriginalFileName><Primary>1</Primary><Content><![CDATA[using System;
+using System.Xml;
+using SourceCode.KO;
+using SourceCode.Workflow.Common.Extenders;
+
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+	public partial class ActionItem_a741d212eb4b4b4abb6e2c87b7cf061f
+	{
+		public class ActionHelper
+		{
+			public static void SetActionResult(Project_32ad791b87334c49ae5dc1653533bbad.ActionItemContext_a741d212eb4b4b4abb6e2c87b7cf061f K2)
+			{
+				K2.WorklistSlot.DataFields["Action Result"].Value = K2.Configuration.ActionResult;
+			}
+
+            public static void FinishAction(Project_32ad791b87334c49ae5dc1653533bbad.ActionItemContext_a741d212eb4b4b4abb6e2c87b7cf061f K2)
+			{
+                if (K2.Configuration.FinishAction)
+                {
+                    K2.Finish();
+                }
+                else 
+                {
+                    K2.Update();
+                }
+			}
+		}
+	}
+}]]></Content></CodeFile></CodeFiles><Guid>a741d212eb4b4b4abb6e2c87b7cf061f</Guid><MetaData /><Username /><CredentialGuid>00000000-0000-0000-0000-000000000000</CredentialGuid><Language>CSharp</Language></Extender><Guid>825f0e06a17247baa3355f72a26c3369</Guid><MetaData /><Parent ref="12f63005-a3a4-41b1-bd4d-93bf022bd790&#xD;" /></DefaultOutcomeAction><DefaultOutcomeSucceedingRule Type="SourceCode.Workflow.Design.Outcome.DefaultOutcomeSucceedingRule" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Extender Type="SourceCode.Workflow.Design.WindowsWorkflowExtender" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><CodeFiles><CodeFile><Guid>abda6ca0e31047cfb449ce9160d3d9e7</Guid><OriginalFileName>@safeitemname@.xoml</OriginalFileName><Primary>1</Primary><Content><![CDATA[<ns0:WorkflowContext xmlns:ns0="clr-namespace:SourceCode.Workflow.Common.Extenders;Assembly=SourceCode.Workflow.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" x:Class="ExtenderProject_32ad791b87334c49ae5dc1653533bbad.SucceedingRule_6eda6215317545db9b092d9bcbf9476d" x:Name="SucceedingRule_6eda6215317545db9b092d9bcbf9476d" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ns0:WorkflowContext.LockedActivities>
+		<x:Array Type="{x:Type System.String}">
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">RuleOutcome</ns1:String>
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">RuleOutcomeTrue</ns1:String>
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">EvaluateRule</ns1:String>
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">SetSucceedingRuleTrue</ns1:String>
+			<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">SetSucceedingRuleFalse</ns1:String>
+		</x:Array>
+	</ns0:WorkflowContext.LockedActivities>
+	<IfElseActivity x:Name="RuleOutcome">
+		<IfElseBranchActivity x:Name="RuleOutcomeTrue">
+			<IfElseBranchActivity.Condition>
+				<CodeCondition Condition="EvaluateRule" />
+			</IfElseBranchActivity.Condition>
+			<CodeActivity x:Name="SetSucceedingRuleTrue" ExecuteCode="SetSucceedingRuleTrue_ExecuteCode" />
+		</IfElseBranchActivity>
+		<IfElseBranchActivity x:Name="RuleOutcomeFalse">
+			<CodeActivity x:Name="SetSucceedingRuleFalse" ExecuteCode="SetSucceedingRuleFalse_ExecuteCode" />
+		</IfElseBranchActivity>
+	</IfElseActivity>
+	
+</ns0:WorkflowContext>
+]]></Content></CodeFile><CodeFile><Guid>3de2e387055343b9833bcf16ccb0d82d</Guid><OriginalFileName>@safeitemname@.xoml.cs</OriginalFileName><Content><![CDATA[using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Drawing;
+using System.Workflow.ComponentModel.Compiler;
+using System.Workflow.ComponentModel.Serialization;
+using System.Workflow.ComponentModel;
+using System.Workflow.ComponentModel.Design;
+using System.Workflow.Runtime;
+using System.Workflow.Activities;
+using System.Workflow.Activities.Rules;
+using SourceCode.Workflow.Common.Extenders;
+using SourceCode.KO;
+using System.Xml;
+using hostContext = Project_32ad791b87334c49ae5dc1653533bbad.SucceedingRuleContext_6eda6215317545db9b092d9bcbf9476d;
+
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+	public partial class SucceedingRule_6eda6215317545db9b092d9bcbf9476d : IWorkflowContext<hostContext>
+	{
+		#region K2 Context
+
+        	private hostContext _k2;
+
+       		#endregion
+
+		#region IWorkflowContext<hostContext> Members
+
+        	public Project_32ad791b87334c49ae5dc1653533bbad.SucceedingRuleContext_6eda6215317545db9b092d9bcbf9476d K2
+        	{
+            		get
+            		{
+            		    return _k2;
+            		}
+            		set
+            		{
+            		    _k2 = value;
+            		}
+        	}
+
+        	#endregion
+
+		private void EvaluateRule(object sender, ConditionalEventArgs e)
+        	{
+
+            		e.Result = SucceedingRuleHelper.AnyOutcomesEvaluatedSuccessfully(K2);
+             
+        	}
+
+        	private void SetSucceedingRuleTrue_ExecuteCode(object sender, EventArgs e)
+        	{
+            		K2.SucceedingRule = true;
+        	}
+
+        	private void SetSucceedingRuleFalse_ExecuteCode(object sender, EventArgs e)
+        	{
+            		K2.SucceedingRule = false;
+        	}
+
+	}
+}
+
+]]></Content></CodeFile><CodeFile><Guid>f877d05a74bc46038f867e74444fde3a</Guid><OriginalFileName>@safeitemname@Helper.cs</OriginalFileName><Primary>1</Primary><Content><![CDATA[using System;
+using System.Xml;
+using SourceCode.KO;
+using SourceCode.Workflow.Common.Extenders;
+
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+	public partial class SucceedingRule_6eda6215317545db9b092d9bcbf9476d
+	{
+		public class SucceedingRuleHelper
+		{
+
+			public static bool AnyOutcomesEvaluatedSuccessfully(Project_32ad791b87334c49ae5dc1653533bbad.SucceedingRuleContext_6eda6215317545db9b092d9bcbf9476d K2)
+			{
+				bool retval = false;
+                K2.ProcessInstance.Logger.LogDebugMessage("Outcome.SucceedingRule.Helper", "Outcome Evaluation: Started");
+    			for (int i = 0; i < K2.Configuration.SetCount; i++)
+    			{
+        			if (GetRuleResult(K2, i))
+        			{
+                        K2.ProcessInstance.Logger.LogDebugMessage("Outcome.SucceedingRule.Helper", "Outcome Event Evaluation Result: " + GetName(K2,i));
+            			SetOutcomeResult(K2, GetName(K2,i));
+          				retval = true;
+		                break;
+        			} 
+
+    			}
+
+                K2.ProcessInstance.Logger.LogDebugMessage("Outcome.SucceedingRule.Helper", "Outcome Evaluation: Completed");
+				return retval;
+			}
+
+			public static void SetOutcomeResult(Project_32ad791b87334c49ae5dc1653533bbad.SucceedingRuleContext_6eda6215317545db9b092d9bcbf9476d K2, string value)
+			{
+				K2.ActivityInstance.DataFields["Outcome"].Value = value;	
+			}
+
+			private static string GetName(Project_32ad791b87334c49ae5dc1653533bbad.SucceedingRuleContext_6eda6215317545db9b092d9bcbf9476d K2, int setIdx)
+		        {
+		            // Get the property that returns the result
+		            string propName = string.Format("OutcomeName{0}", setIdx);
+		            System.Reflection.PropertyInfo pi = K2.Configuration.GetType().GetProperty(propName);
+		            if (pi == null)
+		                return string.Empty;
+
+		            // Invoke the get
+		            System.Reflection.MethodInfo mi = pi.GetGetMethod();
+		            if (mi == null)
+		                return string.Empty;
+
+		            object retval = mi.Invoke(K2.Configuration, null);
+
+		            return Convert.ToString(retval);
+		        }
+
+		        private static bool GetRuleResult(Project_32ad791b87334c49ae5dc1653533bbad.SucceedingRuleContext_6eda6215317545db9b092d9bcbf9476d K2, int setIdx)
+		        {
+		            // Get the property that returns the result
+		            string propName = string.Format("OutcomeRule{0}", setIdx);
+		            System.Reflection.PropertyInfo pi = K2.Configuration.GetType().GetProperty(propName);
+		            if (pi == null)
+		                return true;
+
+		            // Invoke the get
+		            System.Reflection.MethodInfo mi = pi.GetGetMethod();
+		            if (mi == null)
+		                return true;
+
+		            object retval = mi.Invoke(K2.Configuration, null);
+
+		            return Convert.ToBoolean(retval);
+		        }
+		}
+	}
+}]]></Content></CodeFile></CodeFiles><Guid>6eda6215317545db9b092d9bcbf9476d</Guid><MetaData /><Username /><CredentialGuid>00000000-0000-0000-0000-000000000000</CredentialGuid><Language>CSharp</Language></Extender><Outcomes><OutcomeItem Type="SourceCode.Workflow.Design.Outcome.Base.OutcomeItem" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Rule Type="SourceCode.Workflow.Design.SimpleRules.SimpleRule" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Expressions><ExpressionLevelPair Type="SourceCode.Workflow.Design.SimpleRules.ExpressionLevelPair" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Exp Type="SourceCode.Workflow.Design.SimpleRules.ComparisonListExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Left Type="SourceCode.Workflow.Design.SimpleRules.ValueExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Value Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Parts><DataFieldPart Type="SourceCode.Workflow.Design.DataFieldPart" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>c95a99554a97495d92f50d0fbf863e5d</Guid><IsList>1</IsList><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType><Value ref="71ce4b1f-147f-46f1-a9cb-370d3987e23c&#xD;" /><DataFieldName>Action Result</DataFieldName><Scope>Destination</Scope><Type>String</Type><ListOption>Slots</ListOption></DataFieldPart></Parts><Guid>005120305c5e46baa32d07a4431b6973</Guid><IsList>1</IsList><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></Value><Guid>65da1cdf205146e0ac639f9dc56272d6</Guid></Left><Right Type="SourceCode.Workflow.Design.SimpleRules.ValueExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Value Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Parts><ValueTypePart Type="SourceCode.Workflow.Design.ValueTypePart" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>5de6ac6c5ec74c4fb389c026555547b9</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType><Value><![CDATA[Task Completed]]></Value></ValueTypePart></Parts><Guid>8c0ef48da69a4c3f9959ca12b9758f3a</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></Value><Guid>37be9819d8ee42c08d82c63e9bde299f</Guid></Right><Count Type="SourceCode.Workflow.Design.SimpleRules.ValueExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Value Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>f3836bcc474c49068af2c049609340c0</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></Value><Guid>83bc603761f243d38ec476f92d7e7f61</Guid></Count><Guid>e5bb150040f7433582c79194ec44a4d2</Guid><Operator>Equal</Operator><ListOperator>All</ListOperator></Exp><Guid>f7eae6a3ce23487d8df31501dc6c68dc</Guid></ExpressionLevelPair></Expressions><Guid>6e9d7f82772e4816ad728da02b875a96</Guid></Rule><Guid>9514c9d7c5e14debb0b729f83dc2a489</Guid><Name>Task Completed</Name><Description>Default Outcome generated originally from the Task Completed Action.</Description></OutcomeItem></Outcomes><Guid>211fac1623ea457199a07efc4058aa35</Guid><MetaData /><Parent ref="19cebf5e-14da-4350-988f-83a85b3906c0&#xD;" /></DefaultOutcomeSucceedingRule><SimpleLineRule Type="SourceCode.Workflow.Design.SimpleRules.SimpleLineRule" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Extender Type="SourceCode.Workflow.Design.WindowsWorkflowExtender" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><CodeFiles><CodeFile><Guid>04dc2c46753a49ebb9096ac8bd2d0062</Guid><OriginalFileName>@safeitemname@.xoml</OriginalFileName><Primary>1</Primary><Content><![CDATA[<ns0:WorkflowContext xmlns:ns0="clr-namespace:SourceCode.Workflow.Common.Extenders;Assembly=SourceCode.Workflow.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" x:Class="ExtenderProject_32ad791b87334c49ae5dc1653533bbad.LineRule_82683eba68e14c7bb71d5e17cb6dccde" x:Name="LineRule_82683eba68e14c7bb71d5e17cb6dccde" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ns0:WorkflowContext.LockedActivities>
+    </ns0:WorkflowContext.LockedActivities>
+    <CodeActivity x:Name="codeActivity1" ExecuteCode="codeActivity1_ExecuteCode" />
+</ns0:WorkflowContext>
+]]></Content></CodeFile><CodeFile><Guid>bd5b0d171896411babc2863d17def6e5</Guid><OriginalFileName>@safeitemname@.xoml.cs</OriginalFileName><Content><![CDATA[using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Drawing;
+using System.Workflow.ComponentModel.Compiler;
+using System.Workflow.ComponentModel.Serialization;
+using System.Workflow.ComponentModel;
+using System.Workflow.ComponentModel.Design;
+using System.Workflow.Runtime;
+using System.Workflow.Activities;
+using System.Workflow.Activities.Rules;
+using SourceCode.Workflow.Common.Extenders;
+using SourceCode.KO;
+using hostContext = Project_32ad791b87334c49ae5dc1653533bbad.LineRuleContext_82683eba68e14c7bb71d5e17cb6dccde;
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+	public partial class LineRule_82683eba68e14c7bb71d5e17cb6dccde : IWorkflowContext<hostContext>
+	{
+		#region K2 Context
+
+        private hostContext _k2;
+
+        #endregion
+
+		#region IWorkflowContext<hostContext> Members
+
+        public Project_32ad791b87334c49ae5dc1653533bbad.LineRuleContext_82683eba68e14c7bb71d5e17cb6dccde K2
+        {
+            get
+            {
+                return _k2;
+            }
+            set
+            {
+                _k2 = value;
+            }
+        }
+
+        #endregion
+        private void codeActivity1_ExecuteCode(object sender, EventArgs e)
+        {
+            K2.LineRule = K2.Configuration.Rule;
+        }
+	}
+}
+]]></Content></CodeFile></CodeFiles><Guid>82683eba68e14c7bb71d5e17cb6dccde</Guid><MetaData /><Username /><CredentialGuid>00000000-0000-0000-0000-000000000000</CredentialGuid><Language>CSharp</Language></Extender><Rule Type="SourceCode.Workflow.Design.SimpleRules.SimpleRule" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Expressions><ExpressionLevelPair Type="SourceCode.Workflow.Design.SimpleRules.ExpressionLevelPair" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Exp Type="SourceCode.Workflow.Design.SimpleRules.ComparisonExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Left Type="SourceCode.Workflow.Design.SimpleRules.ValueExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Value Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Parts><DataFieldPart Type="SourceCode.Workflow.Design.DataFieldPart" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>2404eb01eddb4410af146ecb4c46f736</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType><Value ref="98d60031-a277-4a22-8d21-90d2fbbb32cf&#xD;" /><DataFieldName>Outcome</DataFieldName><Scope>Activity</Scope><Type>String</Type><ListOption>None</ListOption></DataFieldPart></Parts><Guid>282b1921112b446e8880749bb718243c</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></Value><Guid>c3dfb2cae2044df2b1bdea61654f006e</Guid></Left><Right Type="SourceCode.Workflow.Design.SimpleRules.ValueExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Value Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Parts><ValueTypePart Type="SourceCode.Workflow.Design.ValueTypePart" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>bf926efb76f1465a8e7ae2043f4949fa</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType><Value><![CDATA[Task Completed]]></Value></ValueTypePart></Parts><Guid>7b8dd10170854f909a4b4ee77f2ffef9</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></Value><Guid>ef914910ea864762b901f21ece21d451</Guid></Right><Guid>dc8d9ef7284548f5952f607399e2a9cf</Guid><Operator>Equal</Operator></Exp><Guid>57c44d18a2b647fe9da917c4f63185ec</Guid></ExpressionLevelPair></Expressions><Guid>c106c5fef008425bba887a3e5051d7b7</Guid></Rule><Guid>628af07ff1dc483f998d504d36c12c20</Guid><MetaData /><Parent ref="695a71cd-c989-40ca-824b-1e0cff6a38b6&#xD;" /></SimpleLineRule><DefaultOutcomeEventSucceedingRule Type="SourceCode.Workflow.Design.Outcome.DefaultOutcomeEventSucceedingRule" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Extender Type="SourceCode.Workflow.Design.WindowsWorkflowExtender" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><CodeFiles><CodeFile><Guid>82065bfcb5d4451c8cc2c865cacb3e0f</Guid><OriginalFileName>@safeitemname@.xoml</OriginalFileName><Primary>1</Primary><Content><![CDATA[<ns0:WorkflowContext xmlns:ns0="clr-namespace:SourceCode.Workflow.Common.Extenders;Assembly=SourceCode.Workflow.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d" x:Class="ExtenderProject_32ad791b87334c49ae5dc1653533bbad.EventSucceedingRule_3c3d643cf6844185a8e90d36e103a16f" x:Name="EventSucceedingRule_3c3d643cf6844185a8e90d36e103a16f" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ns0:WorkflowContext.LockedActivities>
+    <x:Array Type="{x:Type System.String}">
+      <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">RuleOutcome</ns1:String>
+      <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">RuleOutcomeTrue</ns1:String>
+      <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">EvaluateRule</ns1:String>
+      <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">SetSucceedingRuleTrue</ns1:String>
+      <ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">SetSucceedingRuleFalse</ns1:String>
+    </x:Array>
+  </ns0:WorkflowContext.LockedActivities>
+  <IfElseActivity x:Name="RuleOutcome">
+    <IfElseBranchActivity x:Name="RuleOutcomeTrue">
+      <IfElseBranchActivity.Condition>
+        <CodeCondition Condition="EvaluateRule" />
+      </IfElseBranchActivity.Condition>
+      <CodeActivity x:Name="SetSucceedingRuleTrue" ExecuteCode="SetSucceedingRuleTrue_ExecuteCode" />
+    </IfElseBranchActivity>
+    <IfElseBranchActivity x:Name="RuleOutcomeFalse">
+      <CodeActivity x:Name="SetSucceedingRuleFalse" ExecuteCode="SetSucceedingRuleFalse_ExecuteCode" />
+    </IfElseBranchActivity>
+  </IfElseActivity>
+
+</ns0:WorkflowContext>
+]]></Content></CodeFile><CodeFile><Guid>7929017a113348e49c23c3dcf08a059b</Guid><OriginalFileName>@safeitemname@.xoml.cs</OriginalFileName><Content><![CDATA[using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Drawing;
+using System.Workflow.ComponentModel.Compiler;
+using System.Workflow.ComponentModel.Serialization;
+using System.Workflow.ComponentModel;
+using System.Workflow.ComponentModel.Design;
+using System.Workflow.Runtime;
+using System.Workflow.Activities;
+using System.Workflow.Activities.Rules;
+using SourceCode.Workflow.Common.Extenders;
+using SourceCode.KO;
+using System.Xml;
+using hostContext = Project_32ad791b87334c49ae5dc1653533bbad.EventSucceedingRuleContext_3c3d643cf6844185a8e90d36e103a16f;
+
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+	public partial class EventSucceedingRule_3c3d643cf6844185a8e90d36e103a16f : IWorkflowContext<hostContext>
+	{
+		#region K2 Context
+
+        	private hostContext _k2;
+
+       		#endregion
+
+		#region IWorkflowContext<hostContext> Members
+
+        	public Project_32ad791b87334c49ae5dc1653533bbad.EventSucceedingRuleContext_3c3d643cf6844185a8e90d36e103a16f K2
+        	{
+            		get
+            		{
+            		    return _k2;
+            		}
+            		set
+            		{
+            		    _k2 = value;
+            		}
+        	}
+
+        	#endregion
+
+		private void EvaluateRule(object sender, ConditionalEventArgs e)
+        	{
+
+                if (K2.EventInstance.ActivityInstanceDestination.ActivityInstance.SingleInstance)
+                {
+                    e.Result = SucceedingRuleHelper.AnyOutcomesEvaluatedSuccessfully(K2);
+                }
+                else
+                {
+                    e.Result = true;
+                }
+             
+        	}
+
+        	private void SetSucceedingRuleTrue_ExecuteCode(object sender, EventArgs e)
+        	{
+            		K2.SucceedingRule = true;
+        	}
+
+        	private void SetSucceedingRuleFalse_ExecuteCode(object sender, EventArgs e)
+        	{
+            		K2.SucceedingRule = false;
+        	}
+
+	}
+}
+
+]]></Content></CodeFile><CodeFile><Guid>6952b379ea03475ea6aeeb064a2e0efe</Guid><OriginalFileName>@safeitemname@Helper.cs</OriginalFileName><Primary>1</Primary><Content><![CDATA[using System;
+using System.Xml;
+using SourceCode.KO;
+using SourceCode.Workflow.Common.Extenders;
+
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+	public partial class EventSucceedingRule_3c3d643cf6844185a8e90d36e103a16f
+	{
+		public class SucceedingRuleHelper
+		{
+
+			public static bool AnyOutcomesEvaluatedSuccessfully(Project_32ad791b87334c49ae5dc1653533bbad.EventSucceedingRuleContext_3c3d643cf6844185a8e90d36e103a16f K2)
+			{
+                bool retval = false;
+                if (K2.EventInstance.ActivityInstanceDestination.ActivityInstance.SingleInstance)
+                {
+                        K2.ProcessInstance.Logger.LogDebugMessage("Outcome.SucceedingRule.EventHelper", "Outcome Evaluation: Started");
+            			for (int i = 0; i < K2.Configuration.SetCount; i++)
+            			{
+                			if (GetRuleResult(K2, i))
+                			{
+                                K2.ProcessInstance.Logger.LogDebugMessage("Outcome.SucceedingRule.EventHelper", "Outcome Event Evaluation Result: " + GetName(K2,i));
+                  				retval = true;
+				                break;
+                			} 
+
+            			}
+                        K2.ProcessInstance.Logger.LogDebugMessage("Outcome.SucceedingRule.EventHelper", "Outcome Evaluation: Completed");
+                } 
+                else 
+                {
+                    retval = true;
+                }
+				return retval;
+			}
+
+			private static string GetName(Project_32ad791b87334c49ae5dc1653533bbad.EventSucceedingRuleContext_3c3d643cf6844185a8e90d36e103a16f K2, int setIdx)
+		        {
+		            // Get the property that returns the result
+		            string propName = string.Format("OutcomeName{0}", setIdx);
+		            System.Reflection.PropertyInfo pi = K2.Configuration.GetType().GetProperty(propName);
+		            if (pi == null)
+		                return string.Empty;
+
+		            // Invoke the get
+		            System.Reflection.MethodInfo mi = pi.GetGetMethod();
+		            if (mi == null)
+		                return string.Empty;
+
+		            object retval = mi.Invoke(K2.Configuration, null);
+
+		            return Convert.ToString(retval);
+		        }
+
+		        private static bool GetRuleResult(Project_32ad791b87334c49ae5dc1653533bbad.EventSucceedingRuleContext_3c3d643cf6844185a8e90d36e103a16f K2, int setIdx)
+		        {
+		            // Get the property that returns the result
+		            string propName = string.Format("OutcomeRule{0}", setIdx);
+		            System.Reflection.PropertyInfo pi = K2.Configuration.GetType().GetProperty(propName);
+		            if (pi == null)
+		                return true;
+
+		            // Invoke the get
+		            System.Reflection.MethodInfo mi = pi.GetGetMethod();
+		            if (mi == null)
+		                return true;
+
+		            object retval = mi.Invoke(K2.Configuration, null);
+
+		            return Convert.ToBoolean(retval);
+		        }
+		}
+	}
+}]]></Content></CodeFile></CodeFiles><Guid>3c3d643cf6844185a8e90d36e103a16f</Guid><MetaData /><Username /><CredentialGuid>00000000-0000-0000-0000-000000000000</CredentialGuid><Language>CSharp</Language></Extender><Outcomes><OutcomeItem Type="SourceCode.Workflow.Design.Outcome.Base.OutcomeItem" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Rule Type="SourceCode.Workflow.Design.SimpleRules.SimpleRule" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Expressions><ExpressionLevelPair Type="SourceCode.Workflow.Design.SimpleRules.ExpressionLevelPair" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Exp Type="SourceCode.Workflow.Design.SimpleRules.ComparisonListExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Left Type="SourceCode.Workflow.Design.SimpleRules.ValueExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Value Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Parts><DataFieldPart Type="SourceCode.Workflow.Design.DataFieldPart" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>2205488793d4405c962b88098a97144e</Guid><IsList>1</IsList><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType><Value ref="71ce4b1f-147f-46f1-a9cb-370d3987e23c&#xD;" /><DataFieldName>Action Result</DataFieldName><Scope>Destination</Scope><Type>String</Type><ListOption>Slots</ListOption></DataFieldPart></Parts><Guid>4db885eb4c184b68bf3783b1d6253a65</Guid><IsList>1</IsList><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></Value><Guid>f1feaf7f115c4f50907166e8a2ae774d</Guid></Left><Right Type="SourceCode.Workflow.Design.SimpleRules.ValueExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Value Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Parts><ValueTypePart Type="SourceCode.Workflow.Design.ValueTypePart" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>12a08aefa9dd4b90968fb52b689e57a3</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType><Value><![CDATA[Task Completed]]></Value></ValueTypePart></Parts><Guid>8d64749fd00e48e69fb2ec7305e1fa35</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></Value><Guid>3db36e0aa95e45bf9773256e1391071b</Guid></Right><Count Type="SourceCode.Workflow.Design.SimpleRules.ValueExpression" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Value Type="SourceCode.Workflow.Authoring.K2Field" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>4fc862fb6a804e9c9a2f480aad608269</Guid><ValueType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ValueType></Value><Guid>f510b11562db4cba8502b4b8f065ca6e</Guid></Count><Guid>5838ad7c5d5e4f3ca853de52208f5be6</Guid><Operator>Equal</Operator><ListOperator>All</ListOperator></Exp><Guid>4177cd837e024975b336a55b2a724e83</Guid></ExpressionLevelPair></Expressions><Guid>3d02ad7be7854d04a03ce85d20a65cbc</Guid></Rule><Guid>85b8fa00e22d4ae69cd2cf7e816a7c17</Guid><Name>Task Completed</Name><Description>Default Outcome generated originally from the Task Completed Action.</Description></OutcomeItem></Outcomes><Guid>87c271b0e21b46d7ac31e211269c976e</Guid><MetaData /><Parent ref="543a1d58-b8b7-4635-a498-7f5e91355e1c&#xD;" /></DefaultOutcomeEventSucceedingRule><ServerEventItem Type="SourceCode.Workflow.Design.ServerEventItem" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Extender Type="SourceCode.Workflow.Design.CodeExtender" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><CodeFiles><CodeFile><Guid>4af1e67fa77d4a2986784ab29d94110a</Guid><OriginalFileName>@safeitemname@.cs</OriginalFileName><Primary>1</Primary><Content><![CDATA[using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Drawing;
+using SourceCode.KO;
+using SourceCode.Workflow.Common.Extenders;
+using hostContext = Project_32ad791b87334c49ae5dc1653533bbad.EventItemContext_bc2f5edabdc5421e87e1edaf0ba92f87;
+namespace ExtenderProject_32ad791b87334c49ae5dc1653533bbad
+{
+    public partial class EventItem_bc2f5edabdc5421e87e1edaf0ba92f87 : ICodeExtender<hostContext>
+	{
+        public void Main(Project_32ad791b87334c49ae5dc1653533bbad.EventItemContext_bc2f5edabdc5421e87e1edaf0ba92f87 K2)
+        {
+            
+        }
+    }
+} 
+]]></Content></CodeFile></CodeFiles><Guid>bc2f5edabdc5421e87e1edaf0ba92f87</Guid><MetaData /><Username /><CredentialGuid>00000000-0000-0000-0000-000000000000</CredentialGuid><ContextMode>CustomContext</ContextMode><Language>CSharp</Language></Extender><Guid>9020de355c3f43ff8b43958837a3a2d7</Guid><MetaData /><Parent ref="996e2020-73f7-45df-9ab7-4af4663c6830&#xD;" /></ServerEventItem></ExecutableItems><Guid>b3d9bb2795f34769a5f05c5f45237915</Guid><Name>Default</Name><Description>This represents the default execution layer for the process.</Description></ExecutionLayer></ExecutionLayers><Lines><Line Type="SourceCode.Workflow.Design.DefaultLine" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><WizardDefinition Type="SourceCode.Workflow.Design.DefaultLineWizardDefinition" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><PropertyWizardDefinitions><PropertyWizardDefinition Type="SourceCode.Workflow.Design.GeneralProperties.GeneralPropertiesPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>c924172526204a04a0598c7f05a24ff1</Guid><Name>{2d3cf94d-3504-486a-b884-55bcca2831eb}</Name><RegisteredItem>Line General Property Wizard</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.SimpleRules.SimpleLineRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>4b66a0f95c4647b895b3cd39abe9784e</Guid><Name>{836772ba-af6d-44f3-bdbd-197cc7a318a0}</Name><RegisteredItem>E050F697-C765-4b55-A7BA-E9E0F05CBF32</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Exceptions.ExceptionPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>67c0fc585a424bdfb6ed99a43a382157</Guid><Name>{0e9c9dcb-a7f8-46bd-b9dc-d6fc227a7876}</Name><RegisteredItem>Exception Rule</RegisteredItem></PropertyWizardDefinition></PropertyWizardDefinitions><Guid>1884df43b7df485b8b53da357ca04087</Guid><Name /><Status>Executed</Status><RegisteredItem>Default Line Wizard</RegisteredItem></WizardDefinition><Guid>695a71cdc98940ca824b1e0cff6a38b6</Guid><Name>Task Completed</Name><Description>Default Line generated originally from the Task Completed Outcome.</Description><MetaData>Task Completed</MetaData><LineRuleGuid>628af07f-f1dc-483f-998d-504d36c12c20</LineRuleGuid><ExceptionGuid>00000000-0000-0000-0000-000000000000</ExceptionGuid><StartActivity>DefaultActivity</StartActivity><FinishActivity>DefaultActivity1</FinishActivity></Line><Line Type="SourceCode.Workflow.Design.DefaultLine" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><WizardDefinition Type="SourceCode.Workflow.Design.DefaultLineWizardDefinition" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><PropertyWizardDefinitions><PropertyWizardDefinition Type="SourceCode.Workflow.Design.GeneralProperties.GeneralPropertiesPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>998db240f8144cca98a2c6541b7a24f2</Guid><Name>{9af14009-df16-4e02-a310-f26933fede59}</Name><RegisteredItem>Line General Property Wizard</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.SimpleRules.SimpleLineRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>23025b8510e744448434c193ce027ff0</Guid><Name>{df2d2c35-046e-4b6a-b6e8-67bb7749c087}</Name><RegisteredItem>E050F697-C765-4b55-A7BA-E9E0F05CBF32</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Exceptions.ExceptionPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>0d7cfad010434880a0d4f6d81815c78a</Guid><Name>{0d4a8b7a-d2e8-4545-a6e6-f022532ee356}</Name><RegisteredItem>Exception Rule</RegisteredItem></PropertyWizardDefinition></PropertyWizardDefinitions><Guid>7f13bafa58b240589085be8a41e21e39</Guid><Name /><Status>Executed</Status><RegisteredItem>Default Line Wizard</RegisteredItem></WizardDefinition><Guid>725570dddd0a416fbf3609989837e50e</Guid><Name>DefaultLine</Name><StartActivity>Start</StartActivity><FinishActivity>DefaultActivity</FinishActivity></Line></Lines><Activities><Activity Type="SourceCode.Workflow.Design.DefaultActivity" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><DataFields><DataField Type="SourceCode.Workflow.Authoring.DataField" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>71ce4b1f147f46f1a9cb370d3987e23c</Guid><Name>Action Result</Name><Hidden>1</Hidden><OnDemand>0</OnDemand><Type>String</Type><Scope>Destination</Scope><Category>Outcomes</Category><Value /></DataField><DataField Type="SourceCode.Workflow.Authoring.DataField" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>98d60031a2774a228d2190d2fbbb32cf</Guid><Name>Outcome</Name><Hidden>1</Hidden><OnDemand>0</OnDemand><Type>String</Type><Scope>Activity</Scope><Category>Outcomes</Category></DataField></DataFields><Events><Event Type="SourceCode.Workflow.Design.ClientEvent" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Actions><EventAction Type="SourceCode.Workflow.Authoring.EventAction" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>12f63005a3a441b1bd4d93bf022bd790</Guid><Name>Task Completed</Name><Description>Default created action.</Description><ActionItemGuid>825f0e06-a172-47ba-a335-5f72a26c3369</ActionItemGuid><BatchProcessed>1</BatchProcessed></EventAction></Actions><WizardDefinition Type="SourceCode.Workflow.Design.DefaultClientWizardDefinition" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><PropertyWizardDefinitions><PropertyWizardDefinition Type="SourceCode.Workflow.Design.GeneralProperties.GeneralPropertiesPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>c597fabc8a1645afb8d7f6e52a29d138</Guid><Name>{19328832-6caf-4a9a-a5ca-73db4f87c4a9}</Name><RegisteredItem>Event General Property Wizard</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.DefaultClientPropertyWizardDefinition" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>50d95117f32744a2872ccf8aef5e125a</Guid><Name>{a43ce490-16b6-4013-a61f-23e1bda63c57}</Name><RegisteredItem>Client Event Item Property Wizard</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Outcome.OutcomePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>eb45b08934fb4cb388a761977647f066</Guid><Name>{985fbb0b-04be-40d3-83fe-04259798c4b9}</Name><RegisteredItem>Event Actions and Outcome Property Wizard</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Escalations.EscalationPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>a4956c8d35024a2d9140fdaaf75db22b</Guid><Name>{41029e3b-737b-4d05-8aa1-f4160aff0c8c}</Name><RegisteredItem>Event Escalations</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Exceptions.ExceptionPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>e1f994f8646d495da32a9b0ba96bd45d</Guid><Name>{d860a60e-9fe2-419b-9bbf-96d612211cc1}</Name><RegisteredItem>Exception Rule</RegisteredItem></PropertyWizardDefinition></PropertyWizardDefinitions><Guid>4074cb0c2c39469d998ade7c33b647eb</Guid><Name /><Status>Executed</Status><RegisteredItem>Default Client Event Wizard</RegisteredItem></WizardDefinition><Guid>543a1d58b8b74635a4987f5e91355e1c</Guid><Name>ClientEvent</Name><EventItemGuid>d3bb77af-99d3-412b-ae06-a9cead82b25c</EventItemGuid><SucceedingRuleGuid>87c271b0-e21b-46d7-ac31-e211269c976e</SucceedingRuleGuid><Type>Client</Type></Event></Events><WizardDefinition Type="SourceCode.Workflow.Design.DefaultActivityWizardDefinition" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><PropertyWizardDefinitions><PropertyWizardDefinition Type="SourceCode.Workflow.Design.GeneralProperties.GeneralPropertiesPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>a69f53fbeed643f1b68141eb63de3988</Guid><Name>{1a641bef-de2e-4d79-9a11-5d8783a28d9f}</Name><RegisteredItem>Activity General Property Wizard</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.SimpleRules.SimplePrecedingRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>de5d77b089414e6997296cd07cacfdc5</Guid><Name>{30ade7ea-c766-4d33-a536-a1e1ae789ea9}</Name><RegisteredItem>192BEB05-2569-4e44-BFB4-7ED57C3EC768</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.SimpleRules.SimpleActivityStartRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>70eedf45c0c9454fa5aa24ad6d143d01</Guid><Name>{f9a75a66-724f-4262-807b-b93448f666a3}</Name><RegisteredItem>53BDF237-B878-4829-8A81-255E05CCBFA9</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.SimpleRules.SimpleDestinationRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>bb32268ec4c74e75aef96ec478a4e09b</Guid><Name>{7b59baa9-545c-4fcb-9722-549a9c18e7cd}</Name><RegisteredItem>AAE10A29-8F80-4934-9623-0A1C4FA4FD09</RegisteredItem><RunAdvancedMode>1</RunAdvancedMode></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Escalations.EscalationPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>4adb1d157bf944f389b0f7883e90bbaa</Guid><Name>{3b1f3d37-a9e6-423b-938d-5d14c7b13118}</Name><RegisteredItem>Activity Escalations</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Exceptions.ExceptionPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>ba5aa6215dc14350b9f2db39b6e97679</Guid><Name>{54344903-0c7c-40e5-abf1-dd4c3cb7a74c}</Name><RegisteredItem>Exception Rule</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Outcome.OutcomeSucceedingRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>d8d645c2e36a42acb62c714f8964c6cd</Guid><Name>{e4d95d45-a611-46fe-9ada-9647b040d6cd}</Name><RegisteredItem>C76701EE-F9D5-40f8-AD2B-0E954A21DF3D</RegisteredItem></PropertyWizardDefinition></PropertyWizardDefinitions><Guid>da1a41fe6e9a4b14aa1237a5a7112a78</Guid><Name /><Status>Executed</Status><RegisteredItem>Default Activity Wizard</RegisteredItem></WizardDefinition><Guid>19cebf5e14da4350988f83a85b3906c0</Guid><Name>DefaultActivity</Name><Slots>1</Slots><Type>DestinationInstanceParralel</Type><DestinationRuleGuid>6bccdb72-080c-492b-b260-0ccb53e0f438</DestinationRuleGuid><SucceedingRuleGuid>211fac16-23ea-4571-99a0-7efc4058aa35</SucceedingRuleGuid></Activity><Activity Type="SourceCode.Workflow.Design.DefaultActivity" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Events><Event Type="SourceCode.Workflow.Design.ServerEvent" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><WizardDefinition Type="SourceCode.Workflow.Design.DefaultServerWizardDefinition" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><PropertyWizardDefinitions><PropertyWizardDefinition Type="SourceCode.Workflow.Design.GeneralProperties.GeneralPropertiesPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>274ea2b527f945f58b992dae8337bcf2</Guid><Name>{026af6aa-d55d-46c9-93e0-df4de8524d67}</Name><RegisteredItem>Event General Property Wizard</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Exceptions.ExceptionPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>39d14c80bb5b4a99a702d07ca679839b</Guid><Name>{9a7fb99e-4687-4b6a-b3cc-d016795eba72}</Name><RegisteredItem>Exception Rule</RegisteredItem></PropertyWizardDefinition></PropertyWizardDefinitions><Guid>fec46439a10d455ea67acbd83e7e43d7</Guid><Name /><Status>Executed</Status><RegisteredItem>Default Server Event - Code</RegisteredItem></WizardDefinition><Guid>996e202073f745df9ab74af4663c6830</Guid><Name>ServerEvent</Name><EventItemGuid>9020de35-5c3f-43ff-8b43-958837a3a2d7</EventItemGuid></Event></Events><WizardDefinition Type="SourceCode.Workflow.Design.DefaultActivityWizardDefinition" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><PropertyWizardDefinitions><PropertyWizardDefinition Type="SourceCode.Workflow.Design.GeneralProperties.GeneralPropertiesPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>e726d8437b6a4603a29817c612510fee</Guid><Name>{7175edc7-f246-4b7a-b8b0-6a671336ca29}</Name><RegisteredItem>Activity General Property Wizard</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.SimpleRules.SimplePrecedingRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>15d132af00d44a94b3875eceb1058ca4</Guid><Name>{e74ae84d-8fc7-4787-94eb-9959dc6ecf76}</Name><RegisteredItem>192BEB05-2569-4e44-BFB4-7ED57C3EC768</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.SimpleRules.SimpleActivityStartRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>aa737d95ee8a4f4687fc7c6347d97cf4</Guid><Name>{df1d7809-09f4-4ad1-a5a5-1165ec0c6f64}</Name><RegisteredItem>53BDF237-B878-4829-8A81-255E05CCBFA9</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.SimpleRules.SimpleDestinationRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>484d51e879ae47c29eccbdf51e98bc5c</Guid><Name>{d41a9cb9-7d99-4069-bff2-ab962b756d35}</Name><RegisteredItem>AAE10A29-8F80-4934-9623-0A1C4FA4FD09</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.SimpleRules.SimpleSucceedingRulePropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>5df549d8e1fb43b99753608f08e2da87</Guid><Name>{84dd0384-3627-40ac-ae37-d3746c78d5a7}</Name><RegisteredItem>D432E2E2-E5EC-476a-9647-B30702805FBF</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Escalations.EscalationPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>e3101aa3f9814e9493ecc28cffa1348d</Guid><Name>{29f7ead4-e23a-4e6f-9476-9ff9d51607f6}</Name><RegisteredItem>Activity Escalations</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Exceptions.ExceptionPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>69dda2becacc4d43afd77ad269eaa79e</Guid><Name>{f48a6bc5-7080-461a-b958-cb2913338945}</Name><RegisteredItem>Exception Rule</RegisteredItem></PropertyWizardDefinition></PropertyWizardDefinitions><Guid>c7f600f8b6b742c5b35cb238702ce790</Guid><Name /><Status>Executed</Status><RegisteredItem>Default Activity Wizard</RegisteredItem></WizardDefinition><Guid>4dc23fc08d9b489291c84b829bcec291</Guid><Name>DefaultActivity1</Name><Slots>1</Slots><Type>SingleInstance</Type></Activity></Activities><StartActivity><Guid>fbada1ceb7c04459b832db3d5cce89ec</Guid><Name>Start</Name><Type>SingleInstance</Type></StartActivity><DataFields><DataField Type="SourceCode.Workflow.Authoring.DataField" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>7885e56606ab4123bca733d802a96e4a</Guid><Name>TravelRequestsID</Name><Type>String</Type><Scope>Process</Scope><Category>None</Category><Value /></DataField></DataFields><Views><ProcessView Type="SourceCode.Workflow.Design.ProcessView" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><ActivitiesLayoutData><ProcessViewActivityLayoutData Type="SourceCode.Workflow.Design.ProcessViewActivityLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>5817d3c9a47c4a289e6b5cad5f631de6</Guid><Width>190</Width><Height>40</Height><X>200</X><Y>10</Y><Name>{fbada1ce-b7c0-4459-b832-db3d5cce89ec}</Name><MainColorR>166</MainColorR><MainColorG>166</MainColorG><MainColorB>166</MainColorB><ButtonsColorR>1</ButtonsColorR><ButtonsColorG>97</ButtonsColorG><ButtonsColorB>154</ButtonsColorB><SelectionColorR>0</SelectionColorR><SelectionColorG>0</SelectionColorG><SelectionColorB>0</SelectionColorB><IsMinimizedLabelVisible>1</IsMinimizedLabelVisible></ProcessViewActivityLayoutData><ProcessViewActivityLayoutData Type="SourceCode.Workflow.Design.ProcessViewActivityLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><EventsLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>f2314f9a4edd4c6aa57c08f49375801e</Guid><Name>{543a1d58-b8b7-4635-a498-7f5e91355e1c}</Name></ProcessViewEventLayoutData></EventsLayoutData><Guid>149250141cdc46a5a7a30262c919121e</Guid><Width>190</Width><Height>71</Height><X>208</X><Y>96</Y><Name>{19cebf5e-14da-4350-988f-83a85b3906c0}</Name><MainColorR>0</MainColorR><MainColorG>128</MainColorG><MainColorB>255</MainColorB><ButtonsColorR>1</ButtonsColorR><ButtonsColorG>97</ButtonsColorG><ButtonsColorB>154</ButtonsColorB><SelectionColorR>0</SelectionColorR><SelectionColorG>0</SelectionColorG><SelectionColorB>0</SelectionColorB><IsActivityStripOpen>1</IsActivityStripOpen><IsEventStripOpen>1</IsEventStripOpen><IsMinimizedLabelVisible>1</IsMinimizedLabelVisible></ProcessViewActivityLayoutData><ProcessViewActivityLayoutData Type="SourceCode.Workflow.Design.ProcessViewActivityLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><EventsLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>a010d45aae694e1b9eae1666c08ffa35</Guid><Name>{c75c479d-4b02-4583-9e3d-5da049520e02}</Name></ProcessViewEventLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>35ca911c3c96442d81b73e82c5729be2</Guid><Name>{0a1aece8-8d00-4776-aa6b-b1268b58fbb6}</Name></ProcessViewEventLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>cfa6a0c1ce4d431eb3e6d7d763896370</Guid><Name>{f7bf7cb4-f00e-4a34-ac00-1025aa718805}</Name></ProcessViewEventLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>ef4457bce9db44f6b7bc87297ec6580c</Guid><Name>{a30c1df5-e625-44c2-b4c8-94fcd4917eb0}</Name></ProcessViewEventLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>305f6acd74df45bfae54f6df2068f37e</Guid><Name>{cdbfd563-77db-4a4b-82bc-b8a414eb7779}</Name></ProcessViewEventLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>62580911bb834f0cb3362eea3358020f</Guid><Name>{9e79e165-429c-4458-9b06-6c9236b1e130}</Name></ProcessViewEventLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>4610909e2c0144138a87754efbc74ffa</Guid><Name>{199f0f50-d471-4a1b-aac5-7a02af52b8dc}</Name></ProcessViewEventLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>d41192753cdb495d893290449449cf7d</Guid><Name>{1bcc90b9-7a2b-4b97-af71-e7c48b6e1033}</Name></ProcessViewEventLayoutData><ProcessViewEventLayoutData Type="SourceCode.Workflow.Design.ProcessViewEventLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>635f84c89d654e5f998201ad9d527093</Guid><Name>{996e2020-73f7-45df-9ab7-4af4663c6830}</Name></ProcessViewEventLayoutData></EventsLayoutData><Guid>91c7234308754b42b7eef4c5c7f46c2d</Guid><Width>190</Width><Height>48</Height><X>208</X><Y>288</Y><Name>{4dc23fc0-8d9b-4892-91c8-4b829bcec291}</Name><MainColorR>255</MainColorR><MainColorG>128</MainColorG><MainColorB>128</MainColorB><ButtonsColorR>1</ButtonsColorR><ButtonsColorG>97</ButtonsColorG><ButtonsColorB>154</ButtonsColorB><SelectionColorR>0</SelectionColorR><SelectionColorG>0</SelectionColorG><SelectionColorB>0</SelectionColorB><IsEventStripOpen>1</IsEventStripOpen><IsMinimizedLabelVisible>1</IsMinimizedLabelVisible></ProcessViewActivityLayoutData></ActivitiesLayoutData><LinesLayoutData><ProcessViewLineLayoutData Type="SourceCode.Workflow.Design.ProcessViewLineLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>f47d7dd6d2a14471b47eab51ebb44339</Guid><StartMaximizedX>95</StartMaximizedX><StartMaximizedY>77</StartMaximizedY><StartMinimizedX>95</StartMinimizedX><StartMinimizedY>40</StartMinimizedY><EndMaximizedX>96</EndMaximizedX><EndMaximizedY>-10</EndMaximizedY><EndMinimizedX>95</EndMinimizedX><EndMinimizedY>0</EndMinimizedY><Label>Task Completed</Label><LabelLocked>0</LabelLocked><LabelVisible>1</LabelVisible><LabelDragged>1</LabelDragged><LabelLocationX>246</LabelLocationX><LabelLocationY>224</LabelLocationY><LineColorR>26</LineColorR><LineColorG>85</LineColorG><LineColorB>39</LineColorB><LineSelectionColorR>0</LineSelectionColorR><LineSelectionColorG>0</LineSelectionColorG><LineSelectionColorB>0</LineSelectionColorB><LinePinned>0</LinePinned><LineRenderPointCount>5</LineRenderPointCount><LineRenderPointX_0>303</LineRenderPointX_0><LineRenderPointY_0>190</LineRenderPointY_0><LineRenderPointX_1>303</LineRenderPointX_1><LineRenderPointY_1>208</LineRenderPointY_1><LineRenderPointX_2>303</LineRenderPointX_2><LineRenderPointY_2>238</LineRenderPointY_2><LineRenderPointX_3>303</LineRenderPointX_3><LineRenderPointY_3>268</LineRenderPointY_3><LineRenderPointX_4>303</LineRenderPointX_4><LineRenderPointY_4>278</LineRenderPointY_4><Name>{695a71cd-c989-40ca-824b-1e0cff6a38b6}</Name></ProcessViewLineLayoutData><ProcessViewLineLayoutData Type="SourceCode.Workflow.Design.ProcessViewLineLayoutData" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>4f6eeaf9a35943d7b6c5c00934c02495</Guid><StartDirectionMinimized>Up</StartDirectionMinimized><StartMaximizedX>102</StartMaximizedX><StartMaximizedY>50</StartMaximizedY><StartMinimizedX>102</StartMinimizedX><StartMinimizedY>0</StartMinimizedY><EndMaximizedX>98</EndMaximizedX><EndMaximizedY>0</EndMaximizedY><EndMinimizedX>98</EndMinimizedX><EndMinimizedY>0</EndMinimizedY><LabelLocked>0</LabelLocked><LabelVisible>1</LabelVisible><LabelDragged>0</LabelDragged><LabelLocationX>293</LabelLocationX><LabelLocationY>88</LabelLocationY><LineColorR>26</LineColorR><LineColorG>85</LineColorG><LineColorB>39</LineColorB><LineSelectionColorR>0</LineSelectionColorR><LineSelectionColorG>0</LineSelectionColorG><LineSelectionColorB>0</LineSelectionColorB><LinePinned>0</LinePinned><LineRenderPointCount>5</LineRenderPointCount><LineRenderPointX_0>302</LineRenderPointX_0><LineRenderPointY_0>51</LineRenderPointY_0><LineRenderPointX_1>302</LineRenderPointX_1><LineRenderPointY_1>69</LineRenderPointY_1><LineRenderPointX_2>302</LineRenderPointX_2><LineRenderPointY_2>72</LineRenderPointY_2><LineRenderPointX_3>302</LineRenderPointX_3><LineRenderPointY_3>76</LineRenderPointY_3><LineRenderPointX_4>302</LineRenderPointX_4><LineRenderPointY_4>86</LineRenderPointY_4><Name>{725570dd-dd0a-416f-bf36-09989837e50e}</Name></ProcessViewLineLayoutData></LinesLayoutData><Guid>df5a62c3f039474b9e294ee4666304e0</Guid><Name>ProcessView</Name><GridSizeWidth>16</GridSizeWidth><GridSizeHeight>16</GridSizeHeight></ProcessView><DocumentView Type="SourceCode.Workflow.Design.DocumentView" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>0c3eadc235344a908ee2e8ad7293380d</Guid><Name>DocumentView</Name><ActivitiesHeading>Activities</ActivitiesHeading><ActivitiesHeadingFontData>Arial,12,Bold,None</ActivitiesHeadingFontData><ActivitiesDescription>Activities Section Description</ActivitiesDescription><ActivitiesDescriptionFontData>Arial,12,Bold,None</ActivitiesDescriptionFontData><LinesHeading>Lines</LinesHeading><LinesHeadingFontData>Arial,12,Bold,None</LinesHeadingFontData><LinesDescription>Arial,12,Bold,None</LinesDescription><DataFieldsAreaHeading>Data Fields</DataFieldsAreaHeading><DataFieldsAreaHeadingFontData>Arial,12,Bold,None</DataFieldsAreaHeadingFontData><DataFieldsAreaDescription>Data Fields Section Description</DataFieldsAreaDescription><DataFieldsAreaDescriptionFontData>Arial,12,Bold,None</DataFieldsAreaDescriptionFontData><XMLFieldsAreaHeading>XML Fields</XMLFieldsAreaHeading><XMLFieldsAreaHeadingFontData>Arial,12,Bold,None</XMLFieldsAreaHeadingFontData><XMLFieldsAreaDescription>XML Fields Section Description</XMLFieldsAreaDescription><XMLFieldsAreaDescriptionFontData>Arial,12,Bold,None</XMLFieldsAreaDescriptionFontData></DocumentView></Views><WizardDefinition Type="SourceCode.Workflow.Design.DefaultWizardDefinition" Assembly="SourceCode.Workflow.Authoring, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><PropertyWizardDefinitions><PropertyWizardDefinition Type="SourceCode.Workflow.Design.GeneralProperties.GeneralPropertiesPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>ced471843cf148be8197397412597fae</Guid><Name>{03a439ec-7af1-42ea-bce6-f8d0771becdc}</Name><RegisteredItem>Process General Property Wizard</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Escalations.EscalationPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>4d62dba33fa2476699d83a0d274b0dd0</Guid><Name>{cb649096-747a-44e1-b012-ee40350d6573}</Name><RegisteredItem>Process Escalations</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Exceptions.ExceptionPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>d02f4bb7e3104a45a671be8fea42a325</Guid><Name>{a29d0730-ca8c-40e8-8158-53a2663906cb}</Name><RegisteredItem>Exception Rule</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.ProcessStartRule.DefaultProcessStartRuleWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>ed51c778ae6143e99e08acd014c8664e</Guid><Name>{43aa6777-01bf-4280-9d41-63aad4e78b52}</Name><RegisteredItem>Process Start Rule</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.ProcessFinishRule.DefaultProcessFinishRuleWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>e2ab35c7f16f49d2a50b55673eee6d3f</Guid><Name>{a2c778fc-e00b-40cf-baf7-c81dc5e3a171}</Name><RegisteredItem>Process Finish Rule</RegisteredItem></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.Associations.AssociationsPropertyDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><WorkflowSmartObjectsCreation Type="SourceCode.Workflow.Design.SmartObjectServices.SmartObjectCreation" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>0593f5a896f14bce8aa3b6307f23c8e2</Guid><CreateProcessSmartObjects>1</CreateProcessSmartObjects></WorkflowSmartObjectsCreation><ReportingSmartObjectsCreation Type="SourceCode.Workflow.Design.SmartObjectServices.SmartObjectCreation" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>34c31ab183d44ccf8e5a6dcd4dabefd5</Guid><CreateTask>1</CreateTask><CreateProcessSmartObjects>1</CreateProcessSmartObjects></ReportingSmartObjectsCreation><SmartObjectServicesDesignerMappings><SmartObjectServicesDesignerMapping Type="SourceCode.Workflow.Design.SmartObjectServices.SmartObjectServicesDesignerMapping" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>ccece58fadc54deebad66d52c8471da5</Guid><DesignerGuid>32ad791b-8733-4c49-ae5d-c1653533bbad</DesignerGuid><WorkflowSmartObjectGuid>7d37bf13-1ae8-4b72-8875-6462ab1674d1</WorkflowSmartObjectGuid><WorkflowReportingSmartObjectGuid>35c3e516-98c3-4557-b02f-c7f398861971</WorkflowReportingSmartObjectGuid></SmartObjectServicesDesignerMapping><SmartObjectServicesDesignerMapping Type="SourceCode.Workflow.Design.SmartObjectServices.SmartObjectServicesDesignerMapping" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>634aa89521fe488ab766a18ee3a7f766</Guid><DesignerGuid>fbada1ce-b7c0-4459-b832-db3d5cce89ec</DesignerGuid><WorkflowSmartObjectGuid>8ca07ca1-f4a7-4a3b-b9b9-a3f8998a4441</WorkflowSmartObjectGuid><WorkflowReportingSmartObjectGuid>218bbda0-b137-4ca4-b9e2-11211a049a9b</WorkflowReportingSmartObjectGuid></SmartObjectServicesDesignerMapping><SmartObjectServicesDesignerMapping Type="SourceCode.Workflow.Design.SmartObjectServices.SmartObjectServicesDesignerMapping" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>365ae2ad968b48358a47f51005e708ef</Guid><DesignerGuid>19cebf5e-14da-4350-988f-83a85b3906c0</DesignerGuid><WorkflowSmartObjectGuid>2ea9c6ff-20f5-499b-940b-1a694cfaa8df</WorkflowSmartObjectGuid><WorkflowReportingSmartObjectGuid>6edc7281-979d-4118-8430-5d0bcb3a1a26</WorkflowReportingSmartObjectGuid></SmartObjectServicesDesignerMapping><SmartObjectServicesDesignerMapping Type="SourceCode.Workflow.Design.SmartObjectServices.SmartObjectServicesDesignerMapping" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>baa9b86fd7484382be335ebf4765dbbe</Guid><DesignerGuid>543a1d58-b8b7-4635-a498-7f5e91355e1c</DesignerGuid><WorkflowSmartObjectGuid>ebc692ee-d14e-4e9e-a7a5-f90d80e01d9e</WorkflowSmartObjectGuid><WorkflowReportingSmartObjectGuid>7a0b9fdf-b4b1-4ebd-b580-570ee6726d3a</WorkflowReportingSmartObjectGuid></SmartObjectServicesDesignerMapping><SmartObjectServicesDesignerMapping Type="SourceCode.Workflow.Design.SmartObjectServices.SmartObjectServicesDesignerMapping" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>63c478dc86914c9b94781be4c60c046c</Guid><DesignerGuid>4dc23fc0-8d9b-4892-91c8-4b829bcec291</DesignerGuid><WorkflowSmartObjectGuid>6ea3df97-ae3c-434d-8a56-06316a83ec4f</WorkflowSmartObjectGuid><WorkflowReportingSmartObjectGuid>796fe18b-6deb-4d34-8fa9-0dbf6dcd3dc0</WorkflowReportingSmartObjectGuid></SmartObjectServicesDesignerMapping><SmartObjectServicesDesignerMapping Type="SourceCode.Workflow.Design.SmartObjectServices.SmartObjectServicesDesignerMapping" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>7749171bf53144ae81b58b50aac1e2e2</Guid><DesignerGuid>996e2020-73f7-45df-9ab7-4af4663c6830</DesignerGuid><WorkflowSmartObjectGuid>e1aa4455-958d-49a0-a359-70a6d95d1773</WorkflowSmartObjectGuid><WorkflowReportingSmartObjectGuid>93189358-65c5-4bca-91b2-f9d89fd03e45</WorkflowReportingSmartObjectGuid></SmartObjectServicesDesignerMapping></SmartObjectServicesDesignerMappings><Guid>dd89a546bc7c4ed49fed7f580508708d</Guid><Name>{e2e79117-a013-4efe-a515-36a57e5739b2}</Name><RegisteredItem>2124FC5B-E0CF-49D9-8331-DF2B47F2A93E</RegisteredItem><UseSmartObjectServicesDesignerMapping>1</UseSmartObjectServicesDesignerMapping></PropertyWizardDefinition><PropertyWizardDefinition Type="SourceCode.Workflow.Design.References.ProjectReferencesPropertyWizardDefinition" Assembly="SourceCode.Workflow.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=16a2c5aaaa1b130d"><Guid>0c14fed1719544c888817773ec74e268</Guid><Name>{35ea0578-7c55-4cd4-97d3-74ce27381a42}</Name><RegisteredItem>FDA04D27-504A-4D24-A5BC-854E8CF395E0</RegisteredItem></PropertyWizardDefinition></PropertyWizardDefinitions><Guid>51ab61127a0e40508cae14df998e4b1d</Guid><Name /><Status>Executed</Status><RegisteredItem>Default Process Wizard</RegisteredItem></WizardDefinition><Guid>32ad791b87334c49ae5dc1653533bbad</Guid><Name>SimpleTravel</Name><ExtenderNamespace>32ad791b87334c49ae5dc1653533bbad</ExtenderNamespace><OriginalPath>SimpleTravel.kprx</OriginalPath><DefaultExecutionLayer>Default</DefaultExecutionLayer><CurrentExecutionLayer>Default</CurrentExecutionLayer><CurrentView>ProcessView</CurrentView></Process>

@@ -1,0 +1,10 @@
+<Processes rootDir="\..\..">
+  <Process Description="Adv Approval - 2 levels approved" processName="K2Field.Utilities.Testing.SampleWorkflow\AdvApproval">
+    <DataFields>
+      <DataField Name="Data.DirectorApprovalRequired">True</DataField>
+    </DataFields>
+    <PreMethodCall />
+    <PostMethodCall />
+    <Activities fileName="Activities\AA\Director-Approved.xml" />
+  </Process>
+</Processes>

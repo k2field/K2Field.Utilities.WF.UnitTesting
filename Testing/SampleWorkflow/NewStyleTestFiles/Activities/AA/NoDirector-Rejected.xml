@@ -1,0 +1,42 @@
+<Activities>
+  <Activity name="Upper Management Approval">
+    <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\AdvApproval</ProcessName>
+    <Activity></Activity>
+    <DataFields />
+    <Action>Reject</Action>
+    <RetryInSeconds>5</RetryInSeconds>
+    <RetryCount>10</RetryCount>
+    <PreMethodCall />
+    <PostMethodCall />
+  </Activity>
+  <Activity name="Accepted">
+    <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\AdvApproval</ProcessName>
+    <Activity></Activity>
+    <DataFields />
+    <Action>[NotTaken]</Action>
+    <RetryInSeconds>5</RetryInSeconds>
+    <RetryCount>10</RetryCount>
+    <PreMethodCall />
+    <PostMethodCall />
+  </Activity>
+  <Activity name="Rejected">
+    <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\AdvApproval</ProcessName>
+    <Activity></Activity>
+    <DataFields />
+    <Action>[Completed]</Action>
+    <RetryInSeconds>5</RetryInSeconds>
+    <RetryCount>10</RetryCount>
+    <PreMethodCall />
+    <PostMethodCall />
+  </Activity>
+  <Activity name="Director Approval">
+    <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\AdvApproval</ProcessName>
+    <Activity></Activity>
+    <DataFields />
+    <Action>[NotTaken]</Action>
+    <RetryInSeconds>5</RetryInSeconds>
+    <RetryCount>10</RetryCount>
+    <PreMethodCall />
+    <PostMethodCall />
+  </Activity>
+</Activities>

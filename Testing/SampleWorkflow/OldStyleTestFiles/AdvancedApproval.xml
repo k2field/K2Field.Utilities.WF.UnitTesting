@@ -1,0 +1,37 @@
+<Processes>
+  <Process Description="Travel - Adv Approval Required">
+    <Activities>
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <Activity>Start</Activity>
+      <DataFields>
+        <DataField Name="Data.Amount">67</DataField>
+        <DataField Name="Data.AdvApprovalRequired">True</DataField>
+      </DataFields>
+      <Action />
+      <RetryInSeconds>5</RetryInSeconds>
+      <RetryCount>2</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activities>
+    <Activities>
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\Travel</ProcessName>
+      <Activity>Needs Approval</Activity>
+      <DataFields />
+      <Action>Accept</Action>
+      <RetryInSeconds>5</RetryInSeconds>
+      <RetryCount>5</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activities>
+    <Activities>
+      <ProcessName>K2Field.Utilities.Testing.SampleWorkflow\AdvApproval</ProcessName>
+      <Activity>Upper Management Approval</Activity>
+      <DataFields />
+      <Action>Accept</Action>
+      <RetryInSeconds>5</RetryInSeconds>
+      <RetryCount>10</RetryCount>
+      <PreMethodCall />
+      <PostMethodCall />
+    </Activities>
+  </Process>
+</Processes>

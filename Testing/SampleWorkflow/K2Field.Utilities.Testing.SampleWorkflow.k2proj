@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{a0175092-160b-4667-86f7-0f4dad578d88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>K2Field.Utilities.Testing.SampleProject</RootNamespace>
+    <AssemblyName>K2Field.Utilities.Testing.SampleProject</AssemblyName>
+    <Language>C#</Language>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Name>K2Field.Utilities.Testing.SampleWorkflow</Name>
+    <SelectedEnvironment>Development</SelectedEnvironment>
+    <DeploymentLabelName>DENALLIX\Administrator - 10/15/2012 2:07:17 PM</DeploymentLabelName>
+    <DeploymentLabelDescription />
+    <SmartObjectConnectionStringProperty>$Field=SmartObject Server</SmartObjectConnectionStringProperty>
+    <WorkflowManagementConnectionStringProperty>$Field=Workflow Management Server</WorkflowManagementConnectionStringProperty>
+    <HistoryIsAdvanced>Normal</HistoryIsAdvanced>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AdvApproval.kprx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Activities\AA\Director-Approved.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Activities\AA\Director-Rejected.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Activities\AA\NoDirector-Rejected.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Activities\AA\NoDirector-Approved.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Activities\Travel\BookHotelOnly.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Activities\Travel\BookFlightsAndHotel.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\All.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\AllTravel.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\AllAA.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Tests\AA\3.Director-Approved.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Tests\AA\1.NoDirector-Approved.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Tests\AA\4.Director-Rejected.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Tests\AA\2.NoDirector-Rejected.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Tests\Travel\1.Simple.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Tests\Travel\4.SimpleReject.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Tests\Travel\2.SimpleWithFlight.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Tests\Travel\5.AdvancedReject.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="NewStyleTestFiles\Tests\Travel\3.Complex.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="OldStyleTestFiles\AdvancedApproval.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Travel.kprx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="TravelRequests.sodx">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewStyleTestFiles">
+      <Include>NewFolder1</Include>
+    </Folder>
+    <Folder Include="NewStyleTestFiles\Activities">
+      <Include>NewStyleTestFiles\NewFolder1</Include>
+    </Folder>
+    <Folder Include="NewStyleTestFiles\Activities\AA">
+      <Include>NewStyleTestFiles\Activities\NewFolder1</Include>
+    </Folder>
+    <Folder Include="NewStyleTestFiles\Activities\Travel">
+      <Include>NewStyleTestFiles\Activities\NewFolder1</Include>
+    </Folder>
+    <Folder Include="NewStyleTestFiles\Tests">
+      <Include>NewStyleTestFiles\NewFolder1</Include>
+    </Folder>
+    <Folder Include="NewStyleTestFiles\Tests\AA">
+      <Include>NewStyleTestFiles\Tests\NewFolder1</Include>
+    </Folder>
+    <Folder Include="NewStyleTestFiles\Tests\Travel">
+      <Include>NewStyleTestFiles\Tests\NewFolder1</Include>
+    </Folder>
+    <Folder Include="OldStyleTestFiles">
+      <Include>NewFolder1</Include>
+    </Folder>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SourceCode\v3.5\ProjectSystem.targets" />
+</Project>

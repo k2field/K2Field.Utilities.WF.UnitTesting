@@ -1,0 +1,6 @@
+<Processes>
+  <Processes fileName="Tests\AA\1.NoDirector-Approved.xml" description="run test"  TestEnabled="True" />
+  <Processes fileName="Tests\AA\2.NoDirector-Rejected.xml" description="run test"  TestEnabled="True" />
+  <Processes fileName="Tests\AA\3.Director-Approved.xml" description="run test"  TestEnabled="True" />
+  <Processes fileName="Tests\AA\4.Director-Rejected.xml" description="run test"  TestEnabled="True" />
+</Processes>

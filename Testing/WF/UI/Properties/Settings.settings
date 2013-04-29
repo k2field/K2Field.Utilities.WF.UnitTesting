@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="K2Field.Utilities.Testing.WF.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="K2Server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="ViewFlowURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://localhost/viewflow</Value>
+    </Setting>
+    <Setting Name="TestFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.\test.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

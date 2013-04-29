@@ -1,0 +1,22 @@
+﻿<Activities>
+  <Activity name="Finished">
+    <ProcessName>Underwriting\TestPlan\DeletePolicy</ProcessName>
+    <DataFields/>
+    <Action>[Completed]</Action>
+    <RetryInSeconds>5</RetryInSeconds>
+    <RetryCount>10</RetryCount>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+  </Activity>
+  <Activity name="Finished">
+    <ProcessName>Underwriting\TestPlan\DeleteAllCaseArtifactsByBOR</ProcessName>
+    <DataFields/>
+    <Action>[Completed]</Action>
+    <RetryInSeconds>1</RetryInSeconds>
+    <RetryCount>1</RetryCount>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+  </Activity>
+</Activities>

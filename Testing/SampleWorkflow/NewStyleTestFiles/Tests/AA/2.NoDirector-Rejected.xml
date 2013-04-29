@@ -1,0 +1,10 @@
+<Processes rootDir="\..\..\..">
+  <Process Description="Adv Approval - 1 level Declined" processName="K2Field.Utilities.Testing.SampleWorkflow\AdvApproval">
+    <DataFields>
+      <DataField Name="Data.DirectorApprovalRequired">False</DataField>
+    </DataFields>
+    <PreMethodCall />
+    <PostMethodCall />
+    <Activities fileName="Activities\AA\NoDirector-Rejected.xml" />
+  </Process>
+</Processes>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Processes>
+  <Process Description="Removes all 2011 sub sites" processName="Underwriting\TestPlan\DeleteYearOfAccountSites">
+    <DataFields>
+      <DataField Name="Data.CurrentYearOfAccount">2011</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUp2011SitesActivities.xml" />
+    </Process>
+  <Process Description="1Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345678Q001High</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="2Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345679</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="3Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345678</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="4Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345678Q001</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="5Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345676</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="6Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345675</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="7Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345677Q001High</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="8Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345676Q001High</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="9Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345679High</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="10Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345678High</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="11Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345677High</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+  <Process Description="12Delete Case" processName="Underwriting\TestPlan\DeletePolicy" TestEnabled="True">
+    <DataFields>
+      <DataField Name="Data.PolicyReference">12345674High</DataField>
+    </DataFields>
+    <PreMethodCall>
+    </PreMethodCall>
+    <PostMethodCall></PostMethodCall>
+    <Activities fileName="CleanUpCaseActivities.xml" />
+  </Process>
+</Processes>
