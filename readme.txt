@@ -46,6 +46,12 @@ I use it all the time on any K2 Process project. It means I never have to check 
 I used it pretty extensively at a Lloyd's syndicate. They had 12+ processes all IPC dependant on each other and the most insane complexity I’ve ever seen in a workflow app, as the whole business process could be started at 3 different places and the 3 main paths all had to be taken to complete the process. **It would not have been possible to completely test all paths without this tool.** The links between 50 xml files got so complex I had to visualise them in Google docs:
 ![Example complexity](\ComplexXMLstructure.png)
 
+===============================
+Is it dependent on anything?
+===============================
+Yes it is dependent on [Core Helper project](https://github.com/k2workflow/K2Field.Helpers). To enable a quick start, I have copiled the most recent version of this and included the assembly in a dependencies sub folder. Please let me know if you have suggestions of another way to do this.
+
+
 =============================== 
 Questions?
 ===============================
