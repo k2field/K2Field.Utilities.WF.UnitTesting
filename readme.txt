@@ -49,7 +49,7 @@ I used it pretty extensively at a Lloyd's syndicate. They had 12+ processes all 
 ===============================
 Is it dependent on anything?
 ===============================
-Yes it is dependent on [Core Helper project](https://github.com/k2workflow/K2Field.Helpers). To enable a quick start, I have copiled the most recent version of this and included the assembly in a dependencies sub folder. Please let me know if you have suggestions of another way to do this.
+Yes it is dependent on [Core Helper project](https://github.com/k2workflow/K2Field.Helpers). To enable a quick start, I have compiled the most recent version of this and included the assembly in a dependencies sub folder. Please let me know if you have suggestions of another way to do this.
 
 
 =============================== 
