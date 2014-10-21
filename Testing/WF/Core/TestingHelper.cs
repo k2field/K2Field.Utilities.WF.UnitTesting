@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Runtime.Serialization;
 using SourceCode.Hosting.Client.BaseAPI;
 using SourceCode.Workflow.Client;
 using System.Configuration;
@@ -61,7 +62,8 @@ namespace K2Field.Utilities.Testing.WF.Core
         TestEngineEnded,
         ActivityExecutionError,
         FatalError,
-        DebugMessage
+        DebugMessage,
+        CreateTask
     }
 
     enum MethodType
@@ -85,7 +87,7 @@ namespace K2Field.Utilities.Testing.WF.Core
         public string XmlFilesParentDirectory { get; set; }
         public List<Process> GlobalProcesses = new List<Process>();
         private K2Field.Helpers.Core.K2Helper k2helper;
-        private Dictionary<string, string> dataFieldDictionary = new Dictionary<string, string>();
+        public Dictionary<string, string> dataFieldDictionary = new Dictionary<string, string>();
         private List<string> uniqueProcessIdList = new List<string>();
         private bool disposed = false;
         private bool XMLLoaded = false;
@@ -96,6 +98,8 @@ namespace K2Field.Utilities.Testing.WF.Core
         private Process currentProcess = null;
         private Activity currentActivity = null;
         public bool ProceedWithTest { get; set; }
+        public bool AutoActionTasks { get; set; }
+        public string CurrentTaskURL { get; set; }
         public StringBuilder TestsTypesToRun { get; set; }
 
         public bool RecordStructure { get; set; }
@@ -106,6 +110,7 @@ namespace K2Field.Utilities.Testing.WF.Core
         {
             this.TestsTypesToRun = new StringBuilder();
             this.XmlFilesParentDirectory = string.Empty;
+            this.AutoActionTasks = true;
         }
 
 
@@ -701,7 +706,12 @@ namespace K2Field.Utilities.Testing.WF.Core
                 {
                     throw;
                 }
-                SendResult(new TestResultArgs(currentProcess, currentActivity, TestResultStage.FatalError, string.Format("Process : {0}{1}{2}", currentActivity.ProcessName, ex.Message, ex.StackTrace)));
+                string innerExceptionStackTrace = null;
+                if (ex.InnerException != null)
+                {
+                    innerExceptionStackTrace = ex.InnerException.StackTrace;
+                }
+                SendResult(new TestResultArgs(currentProcess, currentActivity, TestResultStage.FatalError, string.Format(new NullFormat(),"Process : {0}{1}{2} innerexception:{3}", currentActivity.ProcessName, ex.Message, ex.StackTrace, innerExceptionStackTrace)));
                 p.ProcessStatus = "In Error";
             }
         }
@@ -1030,8 +1040,8 @@ namespace K2Field.Utilities.Testing.WF.Core
                 fil.AddRegularFilter(SourceCode.Workflow.Management.WorklistFields.Folio, SourceCode.Workflow.Management.Criteria.Comparison.Equals, p.Folio);
                 fil.AddRegularFilter(SourceCode.Workflow.Management.WorklistFields.ProcessFullName, SourceCode.Workflow.Management.Criteria.Comparison.Equals, string.IsNullOrEmpty(a.ProcessName) ? p.ProcessName : a.ProcessName);
                 WorklistItems items = k2helper.WorkflowServer().GetWorklistItems(fil);
-
                 ActionWorklistItemsIfFound(items, p, a, out breakFromLoop, out actioned, out IPCeventFound);
+                
                 if (!actioned)
                 {
                     //Open a conection to the server
@@ -1106,7 +1116,10 @@ namespace K2Field.Utilities.Testing.WF.Core
                 //Two modes, one setting and getting, one getting only, which does not need wfDataField
                 if (checkText.Length == 0 || checkText.Equals("set"))
                 {
-
+                    if (wfdf == null)
+                    {
+                        throw new WfdfNullReferenceException("Cannot set df in this mode");
+                    }
                     wfdf.Value = dfToProcess.Value;
                     needsUpdate = true;
                 }
@@ -1114,6 +1127,10 @@ namespace K2Field.Utilities.Testing.WF.Core
                 {
                     string[] partsOfCheck = checkText.Split(new char[] { ':' });
                     string whatToCheck = partsOfCheck[1];
+                    if (dfThatMocksWFDF == null)
+                    {
+                        throw new DddfNullReferenceException("cannot check df in this mode");
+                    }
                     if (!AssertValue(dfThatMocksWFDF, whatToCheck, dfToProcess))
                     {
                         FailTest("Assert Failed", TestResultStage.ActivityExecutionError, currentProcess, currentActivity);
@@ -1127,19 +1144,42 @@ namespace K2Field.Utilities.Testing.WF.Core
                     string keyToStoreAgainst = partsOfCheck[1];
                     //will add if it doesn't exist and overwrite if it does exist
                     //I want this behaviour .... for now!!! Change to .Add() if you want to throw an error if it exists
+
+                    if (dfThatMocksWFDF == null)
+                    {
+                        throw new DddfNullReferenceException("Cannot store df in this mode");
+                    }
                     dataFieldDictionary[keyToStoreAgainst] = dfThatMocksWFDF.Value.ToString();
+
+                    string debugMessage = String.Format("keyToStoreAgainst '{0}' set to value:{1}", keyToStoreAgainst, dfThatMocksWFDF.Value.ToString());
+                    SendResult(new TestResultArgs(currentProcess, currentActivity, TestResultStage.DebugMessage, debugMessage) );
+
                 }
                 else if (checkText.StartsWith("setToVariable", StringComparison.OrdinalIgnoreCase))
                 {
-                    if (dataFieldDictionary.ContainsKey(dfToProcess.Name))
+                    if (!this.AutoActionTasks)
                     {
-                        wfdf.Value = dataFieldDictionary[dfToProcess.Name];
+                        if (dataFieldDictionary.ContainsKey(dfToProcess.Value.ToString()))
+                        {
+                            if (wfdf == null)
+                            {
+                                throw new WfdfNullReferenceException("Cannot set df in this mode");
+                            }
+                            wfdf.Value = dataFieldDictionary[dfToProcess.Value.ToString()];
+
+                            string debugMessage = String.Format("wfdf.Value '{0}' dfdictkey: {1} set to value:{2}", wfdf.Value, dfToProcess.Name, dataFieldDictionary[dfToProcess.Value.ToString()]);
+                            SendResult(new TestResultArgs(currentProcess, currentActivity, TestResultStage.DebugMessage, debugMessage));
+                        }
+                        else
+                        {
+                            string err = string.Format("Problem setting datafield. configured to set from temp variable, but temp variable name does not exist varName:{0} dfvalue:{1}", dfToProcess.Name, dfToProcess.Value);
+
+                            FailTest(err, TestResultStage.ActivityExecutionError, currentProcess, currentActivity);
+                        }
                     }
                     else
                     {
-                        string err = string.Format("Problem setting datafield. configured to set from temp variable, but temp variable name does not exist varName:{0} dfName:{1}", dfToProcess.Name, wfdf.Name);
-
-                        FailTest(err, TestResultStage.ActivityExecutionError, currentProcess, currentActivity);
+                        //Do not set Datafields in this mode. Allow the UI to do it.
                     }
                 }
                 else
@@ -1149,18 +1189,18 @@ namespace K2Field.Utilities.Testing.WF.Core
             }
             catch (NullReferenceException ex)
             {
-                string methodProperties = string.Format("mode: '{0}' p:{1}, a:{2}", checkText, currentProcess, currentActivity);
-                if (wfdf == null)
+                string methodProperties = string.Format("mode: '{0}' p:{1}, a:{2}", checkText, currentProcess.ToString(), currentActivity.Name);
+                if (ex is WfdfNullReferenceException)
                 {
                     throw new ArgumentException("cannot set workflow datafield in this activity mode " + methodProperties, ex);
                 }
-                else if (dfThatMocksWFDF == null)
+                else if (ex is DddfNullReferenceException)
                 {
                     throw new ArgumentException("cannot lookup workflow values in this activity mode" + methodProperties, ex);
                 }
                 else
                 {
-                    throw;
+                    throw ex;
                 }
             }
 
@@ -1173,9 +1213,26 @@ namespace K2Field.Utilities.Testing.WF.Core
 
             foreach (var df in a.DataFields)
             {
-                string dfValue = SmartObjectHelper.GetProcessDataFieldValue(K2Server, p.ProcessInstanceID, df.Key);
+                string dfValue = null;
+                int i = 0;
+                while (dfValue == null)
+                {
+                    dfValue = SmartObjectHelper.GetProcessDataFieldValue(K2Server, p.ProcessInstanceID, df.Key);
+                    System.Threading.Thread.Sleep(1000);
+                    i++;
+                    if (i > 10)
+                    {
+                        break;
+                    }
+                }
+
                 var mockDF = new CoreDataField();
                 mockDF.Name = df.Key;
+                SendResult(new TestResultArgs(p,a, TestResultStage.DebugMessage, string.Format(new NullFormat(), "dfKey:{0} - dfvalue:{0}",df.Key, dfValue)));
+                if (dfValue == null)
+                {
+                    dfValue = "NULL";
+                }
                 mockDF.Value = dfValue;
                 processDataField(df.Value, null, mockDF, out needsUpdate, out breakFromLoop);
             }
@@ -1225,6 +1282,7 @@ namespace K2Field.Utilities.Testing.WF.Core
             if (tesResultStage != TestResultStage.ActivityNotFoundRetrying)
             {
                 p.ProcessHasUnexpectedErrors = true;
+                
                 a.Retry = false;
                 a.TestStatus = "Failed";
             }
@@ -1265,9 +1323,11 @@ namespace K2Field.Utilities.Testing.WF.Core
                 if (df.Value.Check.Equals("setToVariable", StringComparison.OrdinalIgnoreCase))
                 {
                     string keyToSet = df.Value.Value.ToString();
-                    if (dataFieldDictionary.ContainsKey(keyToSet) && dataFields.ContainsKey(keyToSet))
+                    if (dataFieldDictionary.ContainsKey(keyToSet))
                     {
-                        dataFields[keyToSet].Value = dataFieldDictionary[keyToSet];
+                        dataFields[df.Key].Value = dataFieldDictionary[keyToSet];
+                        string debugMessage = String.Format("key '{0}' ketToset: '{1}' set to value:{2}", df.Key, keyToSet, dataFieldDictionary[keyToSet]);
+                        SendResult(new TestResultArgs(currentProcess, currentActivity, TestResultStage.DebugMessage, debugMessage) );
                     }
                     else
                     {
@@ -1392,7 +1452,25 @@ namespace K2Field.Utilities.Testing.WF.Core
                 {
                     k2helper.WorkflowClient().connection.ImpersonateUser(actionuser);
                 }
-                item.Actions[a.Action].Execute();
+
+                if (this.AutoActionTasks)
+                {
+
+                    item.Actions[a.Action].Execute();
+                }
+                else
+                {
+                    this.CurrentTaskURL = item.Data;
+                    SendResult(new TestResultArgs(p,a, TestResultStage.CreateTask, item.Data));
+                    try
+                    {
+                        Thread.Sleep(Timeout.Infinite);
+                    }
+                    catch(ThreadInterruptedException) 
+                    {
+
+                    }
+                }
                 string actionMsg = string.Format("'{0}' - '{1}': Activity '{2}' as user {3}", a.ProcessName, a.Name, a.Action, actionuser);
                 a.Retry = false;
                 a.TestStatus = actionMsg;
@@ -1507,6 +1585,54 @@ namespace K2Field.Utilities.Testing.WF.Core
         }
 
         #endregion
+    }
+
+    [Serializable]
+    public class WfdfNullReferenceException : NullReferenceException
+    {
+        public WfdfNullReferenceException()
+        {
+        }
+
+        public WfdfNullReferenceException(string message)
+            : base(message)
+        {
+        }
+
+        public WfdfNullReferenceException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
+
+        protected WfdfNullReferenceException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+        }
+
+
+    }
+
+    [Serializable]
+    public class DddfNullReferenceException : NullReferenceException
+    {
+        public DddfNullReferenceException()
+        {
+        }
+
+        public DddfNullReferenceException(string message)
+            : base(message)
+        {
+        }
+
+        public DddfNullReferenceException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+        }
+
+        protected DddfNullReferenceException(SerializationInfo info, StreamingContext context)
+            : base(info, context)
+        {
+        }
     }
 
 }

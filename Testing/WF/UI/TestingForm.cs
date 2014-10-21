@@ -18,6 +18,9 @@ using K2Field.Utilities.Testing.WF.Core;
 
 namespace K2Field.Utilities.Testing.WF.UI
 {
+
+
+
     public partial class WorkflowTestUI : Form
     {
         private K2Field.Utilities.Testing.WF.Core.TestingHelper K2TestHelper;
@@ -26,6 +29,10 @@ namespace K2Field.Utilities.Testing.WF.UI
         private string TestFile = string.Empty;
         private bool CreateViewFlowTabs = false;
         private string xmlFilesParentDirectory = string.Empty;
+        private Dictionary<string, string> DataFieldDictionary;
+        private System.Threading.Thread nt;
+        delegate void SetTextCallback(string text);
+        System.Windows.Forms.WebBrowser browser;
 
         public WorkflowTestUI()
         {
@@ -38,6 +45,10 @@ namespace K2Field.Utilities.Testing.WF.UI
         {
             
             K2TestHelper = new TestingHelper();
+            if (DataFieldDictionary != null)
+            {
+                K2TestHelper.dataFieldDictionary = DataFieldDictionary;
+            }
             K2TestHelper.SendTestResult += new SendTestResultArgs(K2TestHelper_SendTestResult);
         }
 
@@ -64,34 +75,43 @@ namespace K2Field.Utilities.Testing.WF.UI
 
         private void btnStartTests_Click(object sender, EventArgs e)
         {
-            this.txtResults.Text = string.Empty;
-
-            K2Server = this.txtK2Server.Text;
-            ViewFlowURL = this.txtWorkspaceURL.Text;
-            CreateViewFlowTabs = this.chkCreateViewFlowTabs.Checked;
-            //Save Current setings.
-            SaveConfigFile();
-
-            //remove all tabs (viewflows) except results tab
-            for (int i = 1; i < tabControl1.TabPages.Count; i++)
+            if (this.btnStartTests.Text == "Start Tests")
             {
-                tabControl1.TabPages.RemoveAt(i);
-                i--;
+                this.btnStartTests.Text = "Resume Test";
+                this.txtResults.Text = string.Empty;
+
+                K2Server = this.txtK2Server.Text;
+                ViewFlowURL = this.txtWorkspaceURL.Text;
+                CreateViewFlowTabs = this.chkCreateViewFlowTabs.Checked;
+                //Save Current setings.
+                SaveConfigFile();
+
+                //remove all tabs (viewflows) except results tab
+                for (int i = 1; i < tabControl1.TabPages.Count; i++)
+                {
+                    tabControl1.TabPages.RemoveAt(i);
+                    i--;
+                }
+
+                span = new TimeSpan();
+                startdate = DateTime.Now;
+                this.statusStripTimer.Enabled = true;
+                this.xmlFilesParentDirectory = GetDirectory(this.txtFilename.Text);
+
+                this.lblStatus.ForeColor = Color.Black;
+
+                configureTester();
+                nt = new System.Threading.Thread(new System.Threading.ThreadStart(StartTest));
+                nt.Start();
+                if (K2TestHelper != null)
+                {
+                    K2TestHelper.Dispose();
+                }
             }
-
-            span = new TimeSpan();
-            startdate = DateTime.Now;
-            this.statusStripTimer.Enabled = true;
-            this.xmlFilesParentDirectory = GetDirectory(this.txtFilename.Text);
-
-            this.lblStatus.ForeColor = Color.Black;
-
-            configureTester();
-            System.Threading.Thread nt = new System.Threading.Thread(new System.Threading.ThreadStart(StartTest));
-            nt.Start();
-            if (K2TestHelper != null)
+            else
             {
-                K2TestHelper.Dispose();
+                nt.Interrupt();
+                this.tabControl1.SelectedIndex = 0;
             }
         }
 
@@ -118,9 +138,30 @@ namespace K2Field.Utilities.Testing.WF.UI
             K2TestHelper.K2Server = K2Server;
             K2TestHelper.LoadXMLTestFile(this.txtFilename.Text);
             K2TestHelper.ProceedWithTest = true;
+            K2TestHelper.AutoActionTasks = this.AutoCompleteTasks.Checked;
             
             K2TestHelper.StartTest(K2Server);
+
+            SetStartButtonText("Start Tests");
+            DataFieldDictionary = K2TestHelper.dataFieldDictionary;
         }
+
+        private void SetStartButtonText(string text)
+        {
+            // InvokeRequired required compares the thread ID of the 
+            // calling thread to the thread ID of the creating thread. 
+            // If these threads are different, it returns true. 
+            if (this.btnStartTests.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetStartButtonText);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.btnStartTests.Text = text;
+            }
+        }
+
 
         void K2TestHelper_SendTestResult(object sender, K2Field.Utilities.Testing.WF.Core.TestResultArgs e)
         {
@@ -139,11 +180,19 @@ namespace K2Field.Utilities.Testing.WF.UI
                 {
                     AddResult("\t" + e.ResultStage.ToString() + "  " + e.ExtraDetails);
                     Thread.Sleep(2000);
-                    AddNewTab(e.CurrentProcess.Description, e.CurrentProcess.ProcessInstanceID);
+                    AddNewViewFlowTab(e.CurrentProcess.Description, e.CurrentProcess.ProcessInstanceID);
                 }
                 isDisplayed = true;
             }
 
+            if (e.ResultStage == TestResultStage.CreateTask && !isDisplayed)
+            {
+                AddResult("\t" + e.ResultStage.ToString() + "  " + e.ExtraDetails);
+                Thread.Sleep(2000);
+                AddNewTaskTab();
+                
+                isDisplayed = true;
+            }
 
             if (e.ResultStage == TestResultStage.ActivityActioned && !isDisplayed)
             {
@@ -184,9 +233,10 @@ namespace K2Field.Utilities.Testing.WF.UI
             AddResult("\n");
             AddResult("-------------------------------Results-----------------------------");
             bool testFailed = false;
+            bool cleanupTestFailed = false;
             foreach (var p in Processes)
             {
-                if (p.ProcessType == ProcessType.assert)
+                if (p.ProcessType == ProcessType.assert || p.ProcessType == ProcessType.setup)
                 {
                     if (p.ProcessHasUnexpectedErrors)
                     {
@@ -199,6 +249,13 @@ namespace K2Field.Utilities.Testing.WF.UI
                     AddResult(string.Format("{0} ", " Process Status : " + p.ProcessStatus));
                     if (p.ProcessHasUnexpectedErrors) AddResult(string.Format("{0} ", " Error : " + p.ProcessError));
                 }
+                else if (p.ProcessType == ProcessType.cleanup)
+                {
+                    if (p.ProcessHasUnexpectedErrors)
+                    {
+                        cleanupTestFailed = true;
+                    }
+                }
             }
             if (testFailed)
             {
@@ -206,8 +263,14 @@ namespace K2Field.Utilities.Testing.WF.UI
             }
             else
             {
-                AddResult("All tests succeeded");
+                AddResult("Assert tests succeeded");
             }
+
+            if (cleanupTestFailed)
+            {
+                AddResult("Warning: At least one cleanup test failed. Remember to revet to clean state!");
+            }
+
             WriteXMLResults(Processes);
         }
 
@@ -281,7 +344,7 @@ namespace K2Field.Utilities.Testing.WF.UI
         private string TabHeaderText = string.Empty;
         private int TabProcInst = 0;
 
-        private void DrawURLTab()
+        private void DrawViewFlowURLTab()
         {
             TabPage tab = new TabPage();
             tab.Text = TabHeaderText;
@@ -299,12 +362,55 @@ namespace K2Field.Utilities.Testing.WF.UI
             }
         }
 
-        private void AddNewTab(string headertext, int procinst)
+        private void DrawTaskURLTab()
+        {
+            TabPage tab = new TabPage();
+            tab.Text = TabHeaderText;
+            browser = new WebBrowser();
+
+            string url = K2TestHelper.CurrentTaskURL;
+
+            if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
+            {
+                browser.Url = new Uri(url);
+                browser.Dock = DockStyle.Fill;
+                tab.Controls.Add(browser);
+                tabControl1.TabPages.Add(tab);
+                AddResult("\t" + url);
+                tabControl1.SelectedIndex = tabControl1.TabPages.Count - 1;
+
+                browser.Navigated += browser_Navigated;
+            }
+        }
+
+        void browser_Navigated(object sender, EventArgs e)
+        {
+            if (K2TestHelper.CurrentTaskURL != browser.Url.ToString())
+            {
+                this.lblStatus.Text = "Postback detected: " + browser.Url.ToString();
+                this.tabControl1.SelectedIndex = 0; 
+                this.nt.Interrupt();
+            }
+            else
+            {
+                this.lblStatus.Text = "Please Action Task: " + browser.Url.ToString();
+            }
+        }
+
+        private void AddNewViewFlowTab(string headertext, int procinst)
         {
             TabHeaderText = headertext;
             TabProcInst = procinst;
 
-            mydelegate inst = new mydelegate(DrawURLTab);
+            mydelegate inst = new mydelegate(DrawViewFlowURLTab);
+            this.Invoke(inst);
+        }
+
+        private void AddNewTaskTab()
+        {
+            TabHeaderText = "Task to Action";
+
+            mydelegate inst = new mydelegate(DrawTaskURLTab);
             this.Invoke(inst);
         }
 
@@ -396,6 +502,9 @@ namespace K2Field.Utilities.Testing.WF.UI
             K2TestHelper.ProceedWithTest = false;
         }
 
+        private void AutoCompleteTasks_CheckedChanged(object sender, EventArgs e)
+        {
+        }
 
     }
 }

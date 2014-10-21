@@ -57,6 +57,7 @@
             this.chkRunSetUp = new System.Windows.Forms.CheckBox();
             this.chkRunAsserts = new System.Windows.Forms.CheckBox();
             this.chkSaveTestStructure = new System.Windows.Forms.CheckBox();
+            this.AutoCompleteTasks = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -73,6 +74,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1145, 405);
             this.tabControl1.TabIndex = 0;
+            
             // 
             // tabPage1
             // 
@@ -97,9 +99,9 @@
             // btnStartTests
             // 
             this.btnStartTests.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStartTests.Location = new System.Drawing.Point(1066, 5);
+            this.btnStartTests.Location = new System.Drawing.Point(1045, 5);
             this.btnStartTests.Name = "btnStartTests";
-            this.btnStartTests.Size = new System.Drawing.Size(75, 23);
+            this.btnStartTests.Size = new System.Drawing.Size(96, 23);
             this.btnStartTests.TabIndex = 5;
             this.btnStartTests.Text = "Start Tests";
             this.btnStartTests.UseVisualStyleBackColor = true;
@@ -195,7 +197,7 @@
             this.chkCreateViewFlowTabs.AutoSize = true;
             this.chkCreateViewFlowTabs.Checked = true;
             this.chkCreateViewFlowTabs.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkCreateViewFlowTabs.Location = new System.Drawing.Point(850, 1);
+            this.chkCreateViewFlowTabs.Location = new System.Drawing.Point(840, 1);
             this.chkCreateViewFlowTabs.Name = "chkCreateViewFlowTabs";
             this.chkCreateViewFlowTabs.Size = new System.Drawing.Size(202, 17);
             this.chkCreateViewFlowTabs.TabIndex = 3;
@@ -254,7 +256,7 @@
             // 
             this.chkDebug.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkDebug.AutoSize = true;
-            this.chkDebug.Location = new System.Drawing.Point(850, 18);
+            this.chkDebug.Location = new System.Drawing.Point(840, 18);
             this.chkDebug.Name = "chkDebug";
             this.chkDebug.Size = new System.Drawing.Size(137, 17);
             this.chkDebug.TabIndex = 4;
@@ -264,9 +266,9 @@
             // btnStopTests
             // 
             this.btnStopTests.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStopTests.Location = new System.Drawing.Point(1066, 38);
+            this.btnStopTests.Location = new System.Drawing.Point(1045, 38);
             this.btnStopTests.Name = "btnStopTests";
-            this.btnStopTests.Size = new System.Drawing.Size(75, 23);
+            this.btnStopTests.Size = new System.Drawing.Size(96, 23);
             this.btnStopTests.TabIndex = 15;
             this.btnStopTests.Text = "Stop Tests";
             this.btnStopTests.UseVisualStyleBackColor = true;
@@ -278,7 +280,7 @@
             this.chkRunCleanUp.AutoSize = true;
             this.chkRunCleanUp.Checked = true;
             this.chkRunCleanUp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkRunCleanUp.Location = new System.Drawing.Point(850, 35);
+            this.chkRunCleanUp.Location = new System.Drawing.Point(840, 35);
             this.chkRunCleanUp.Name = "chkRunCleanUp";
             this.chkRunCleanUp.Size = new System.Drawing.Size(93, 17);
             this.chkRunCleanUp.TabIndex = 16;
@@ -292,7 +294,7 @@
             this.chkRunSetUp.AutoSize = true;
             this.chkRunSetUp.Checked = true;
             this.chkRunSetUp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkRunSetUp.Location = new System.Drawing.Point(850, 52);
+            this.chkRunSetUp.Location = new System.Drawing.Point(840, 52);
             this.chkRunSetUp.Name = "chkRunSetUp";
             this.chkRunSetUp.Size = new System.Drawing.Size(82, 17);
             this.chkRunSetUp.TabIndex = 17;
@@ -306,7 +308,7 @@
             this.chkRunAsserts.AutoSize = true;
             this.chkRunAsserts.Checked = true;
             this.chkRunAsserts.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkRunAsserts.Location = new System.Drawing.Point(850, 69);
+            this.chkRunAsserts.Location = new System.Drawing.Point(840, 69);
             this.chkRunAsserts.Name = "chkRunAsserts";
             this.chkRunAsserts.Size = new System.Drawing.Size(83, 17);
             this.chkRunAsserts.TabIndex = 18;
@@ -318,7 +320,7 @@
             // 
             this.chkSaveTestStructure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkSaveTestStructure.AutoSize = true;
-            this.chkSaveTestStructure.Location = new System.Drawing.Point(850, 92);
+            this.chkSaveTestStructure.Location = new System.Drawing.Point(840, 92);
             this.chkSaveTestStructure.Name = "chkSaveTestStructure";
             this.chkSaveTestStructure.Size = new System.Drawing.Size(121, 17);
             this.chkSaveTestStructure.TabIndex = 19;
@@ -326,11 +328,27 @@
             this.chkSaveTestStructure.Text = "Save Test Structure";
             this.chkSaveTestStructure.UseVisualStyleBackColor = true;
             // 
+            // AutoCompleteTasks
+            // 
+            this.AutoCompleteTasks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AutoCompleteTasks.AutoSize = true;
+            this.AutoCompleteTasks.Checked = true;
+            this.AutoCompleteTasks.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AutoCompleteTasks.Location = new System.Drawing.Point(840, 106);
+            this.AutoCompleteTasks.Name = "AutoCompleteTasks";
+            this.AutoCompleteTasks.Size = new System.Drawing.Size(153, 17);
+            this.AutoCompleteTasks.TabIndex = 20;
+            this.AutoCompleteTasks.Tag = "";
+            this.AutoCompleteTasks.Text = "Automatically Action Tasks";
+            this.AutoCompleteTasks.UseVisualStyleBackColor = true;
+            this.AutoCompleteTasks.CheckedChanged += new System.EventHandler(this.AutoCompleteTasks_CheckedChanged);
+            // 
             // WorkflowTestUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1147, 603);
+            this.Controls.Add(this.AutoCompleteTasks);
             this.Controls.Add(this.chkSaveTestStructure);
             this.Controls.Add(this.chkRunAsserts);
             this.Controls.Add(this.chkRunSetUp);
@@ -393,6 +411,7 @@
         private System.Windows.Forms.CheckBox chkRunSetUp;
         private System.Windows.Forms.CheckBox chkRunAsserts;
         private System.Windows.Forms.CheckBox chkSaveTestStructure;
+        private System.Windows.Forms.CheckBox AutoCompleteTasks;
     }
 }
 
